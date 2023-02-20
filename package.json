@@ -9,16 +9,28 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
-  "main": "./out/extension.js",
   "contributes": {
-    "commands": [
-      {
-        "command": "element-plus-snippets.helloWorld",
-        "title": "Hello World"
+    "configuration": {
+      "type": "object",
+      "title": "Element UI Helper Config",
+      "properties": {
+        "element-ui-helper.language": {
+          "type": "string",
+          "default": "zh-CN",
+          "description": "Document Language of Element UI",
+          "enum": [
+            "zh-CN",
+            "en-US"
+          ]
+        }
       }
-    ]
+    }
   },
+  "activationEvents": [
+    "onLanguage:vue",
+    "onDebug"
+  ],
+  "main": "./out/extension.js",
   "scripts": {
     "vscode:prepublish": "pnpm run compile",
     "compile": "tsc -p ./",
