@@ -1,6 +1,6 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentEvent } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentEvent } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   { name: 'value/v-model', description: 'binding value', type: 'number', value: '—', default: '0' },
@@ -21,13 +21,13 @@ export const attributes: DocumentAttribute[] = [
   { name: 'debounce', description: 'debounce delay when typing, in milliseconds, works when `show-input` is true', type: 'number', value: '—', default: '300' },
   { name: 'tooltip-class', description: 'custom class name for the tooltip', type: 'string', value: '—', default: '—' },
   { name: 'marks', description: 'marks， type of key must be `number` and must in closed interval `[min, max]`, each mark can custom style', type: 'object', value: '—', default: '—' }
-]
+];
 
 export const events: DocumentEvent[] = [
   { name: 'change', description: 'triggers when the value changes (if the mouse is being dragged, this event only fires when the mouse is released)', parameter: 'value after changing' },
   { name: 'input', description: "triggers when the data changes (It'll be emitted in real time during sliding)", parameter: 'value after changing' }
-]
+];
 
-export const document: ElDocument = { attributes, events }
+export const document: ElDocument = { attributes, events };
 
-export default document
+export default document;

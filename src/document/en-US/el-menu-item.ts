@@ -1,6 +1,6 @@
-import { DocumentAttribute } from '@/document'
-import { ElDocument } from '@/document'
-import { DocumentEvent } from '@/document'
+import { DocumentAttribute } from '@/document';
+import { ElDocument } from '@/document';
+import { DocumentEvent } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -24,7 +24,7 @@ export const attributes: DocumentAttribute[] = [
     value: '—',
     default: false
   }
-]
+];
 
 export const events: DocumentEvent[] = [
   {
@@ -32,8 +32,8 @@ export const events: DocumentEvent[] = [
     description: 'callback function when menu-item is clicked',
     parameter: 'el: menu-item instance'
   }
-]
+];
 
-export const document: ElDocument = { events }
+export const document: ElDocument = { events };
 
-export default document
+export default document;

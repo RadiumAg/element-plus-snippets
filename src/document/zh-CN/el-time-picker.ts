@@ -1,7 +1,7 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentMethod } from '@/document'
-import { DocumentEvent } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentMethod } from '@/document';
+import { DocumentEvent } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -144,9 +144,9 @@ export const attributes: DocumentAttribute[] = [
     value: '—',
     default: 'el-icon-circle-close'
   }
-]
+];
 
-export const methods: DocumentMethod[] = [{ name: 'focus', description: '使 input 获取焦点', parameter: '-' }]
+export const methods: DocumentMethod[] = [{ name: 'focus', description: '使 input 获取焦点', parameter: '-' }];
 
 export const events: DocumentEvent[] = [
   {
@@ -164,7 +164,7 @@ export const events: DocumentEvent[] = [
     description: '当 input 获得焦点时触发',
     parameter: '组件实例'
   }
-]
+];
 
 const pickerOptions: DocumentAttribute[] = [
   {
@@ -181,8 +181,8 @@ const pickerOptions: DocumentAttribute[] = [
     value: 'HH,mm,ss,A',
     default: '"HH:mm:ss"'
   }
-]
+];
 
-export const document: ElDocument = { attributes, methods, events, pickerOptions }
+export const document: ElDocument = { attributes, methods, events, pickerOptions };
 
-export default document
+export default document;

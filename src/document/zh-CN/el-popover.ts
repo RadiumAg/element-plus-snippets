@@ -1,7 +1,7 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentEvent } from '@/document'
-import { DocumentSlot } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentEvent } from '@/document';
+import { DocumentSlot } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -109,7 +109,7 @@ export const attributes: DocumentAttribute[] = [
     value: '—',
     default: '0'
   }
-]
+];
 
 export const events: DocumentEvent[] = [
   { name: 'show', description: '显示时触发', parameter: '—' },
@@ -124,13 +124,13 @@ export const events: DocumentEvent[] = [
     description: '隐藏动画播放完毕后触发',
     parameter: '—'
   }
-]
+];
 
 export const slots: DocumentSlot[] = [
   { name: '—', description: 'Popover 内嵌 HTML 文本' },
   { name: 'reference', description: '触发 Popover 显示的 HTML 元素' }
-]
+];
 
-export const document: ElDocument = { attributes, events, slots }
+export const document: ElDocument = { attributes, events, slots };
 
-export default document
+export default document;

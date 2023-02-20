@@ -1,7 +1,7 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentEvent } from '@/document'
-import { DocumentSlot } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentEvent } from '@/document';
+import { DocumentSlot } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   { name: 'src', description: 'Image source, same as native', type: 'string', value: '—', default: '-' },
@@ -24,18 +24,18 @@ export const attributes: DocumentAttribute[] = [
   },
   { name: 'preview-src-list', description: 'allow big image preview', type: 'Array', value: '—', default: '-' },
   { name: 'z-index', description: 'set image preview z-index', type: 'Number', value: '—', default: '2000' }
-]
+];
 
 export const events: DocumentEvent[] = [
   { name: 'load', description: 'Same as native load', parameter: '(e: Event)' },
   { name: 'error', description: 'Same as native error', parameter: '(e: Error)' }
-]
+];
 
 export const slots: DocumentSlot[] = [
   { name: 'placeholder', description: 'Triggers when image load' },
   { name: 'error', description: 'Triggers when image load failed' }
-]
+];
 
-export const document: ElDocument = { attributes, events, slots }
+export const document: ElDocument = { attributes, events, slots };
 
-export default document
+export default document;

@@ -1,5 +1,5 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   { name: 'label', description: 'title of the tab', type: 'string', value: '—', default: '—' },
@@ -13,8 +13,8 @@ export const attributes: DocumentAttribute[] = [
   },
   { name: 'closable', description: 'whether Tab is closable', type: 'boolean', value: '—', default: 'false' },
   { name: 'lazy', description: 'whether Tab is lazily rendered', type: 'boolean', value: '—', default: 'false' }
-]
+];
 
-export const document: ElDocument = { attributes }
+export const document: ElDocument = { attributes };
 
-export default document
+export default document;

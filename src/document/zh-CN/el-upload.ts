@@ -1,7 +1,7 @@
-import { DocumentAttribute } from '@/document'
-import { ElDocument } from '@/document'
-import { DocumentMethod } from '@/document'
-import { DocumentSlot } from '@/document'
+import { DocumentAttribute } from '@/document';
+import { ElDocument } from '@/document';
+import { DocumentMethod } from '@/document';
+import { DocumentSlot } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -172,7 +172,7 @@ export const attributes: DocumentAttribute[] = [
     value: '—',
     default: '-'
   }
-]
+];
 
 export const methods: DocumentMethod[] = [
   {
@@ -186,13 +186,13 @@ export const methods: DocumentMethod[] = [
     parameter: '（ file: fileList 中的 file 对象 ）'
   },
   { name: 'submit', description: '手动上传文件列表', parameter: '—' }
-]
+];
 
 export const slots: DocumentSlot[] = [
   { name: 'trigger', description: '触发文件选择框的内容' },
   { name: 'tip', description: '提示说明文字' }
-]
+];
 
-export const document: ElDocument = { attributes, methods, slots }
+export const document: ElDocument = { attributes, methods, slots };
 
-export default document
+export default document;

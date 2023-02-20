@@ -1,7 +1,7 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentMethod } from '@/document'
-import { DocumentEvent } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentMethod } from '@/document';
+import { DocumentEvent } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   { name: 'value/v-model', description: 'binding value', type: 'date(DateTimePicker) / array(DateTimeRangePicker)', value: '—', default: '—' },
@@ -45,15 +45,15 @@ export const attributes: DocumentAttribute[] = [
   { name: 'unlink-panels', description: 'unllink two date-panels in range-picker', type: 'boolean', value: '—', default: 'false' },
   { name: 'prefix-icon', description: 'Custom prefix icon class', type: 'string', value: '—', default: 'el-icon-date' },
   { name: 'clear-icon', description: 'Custom clear icon class', type: 'string', value: '—', default: 'el-icon-circle-close' }
-]
+];
 
-export const methods: DocumentMethod[] = [{ name: 'focus', description: 'focus the Input component', parameter: '—' }]
+export const methods: DocumentMethod[] = [{ name: 'focus', description: 'focus the Input component', parameter: '—' }];
 
 export const events: DocumentEvent[] = [
   { name: 'change', description: 'triggers when user confirms the value', parameter: "component's binding value" },
   { name: 'blur', description: 'triggers when Input blurs', parameter: 'component instance' },
   { name: 'focus', description: 'triggers when Input focuses', parameter: 'component instance' }
-]
+];
 
 export const pickerOptions: DocumentAttribute[] = [
   {
@@ -70,7 +70,7 @@ export const pickerOptions: DocumentAttribute[] = [
     value: 'hour HH, minute mm, second ss, AM/PM A',
     default: "'HH:mm:ss'"
   }
-]
+];
 
 export const selectOptions: DocumentAttribute[] = [
   {
@@ -108,8 +108,8 @@ export const selectOptions: DocumentAttribute[] = [
     value: '—',
     default: '—'
   }
-]
+];
 
-export const document: ElDocument = { attributes, methods, events, pickerOptions, selectOptions }
+export const document: ElDocument = { attributes, methods, events, pickerOptions, selectOptions };
 
-export default document
+export default document;

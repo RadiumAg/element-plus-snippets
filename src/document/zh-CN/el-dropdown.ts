@@ -1,7 +1,7 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentEvent } from '@/document'
-import { DocumentSlot } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentEvent } from '@/document';
+import { DocumentSlot } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -74,7 +74,7 @@ export const attributes: DocumentAttribute[] = [
     value: '—',
     default: 'false'
   }
-]
+];
 
 export const events: DocumentEvent[] = [
   {
@@ -92,7 +92,7 @@ export const events: DocumentEvent[] = [
     description: '下拉框出现/隐藏时触发',
     parameter: '出现则为 true，隐藏则为 false'
   }
-]
+];
 
 export const slots: DocumentSlot[] = [
   {
@@ -103,8 +103,8 @@ export const slots: DocumentSlot[] = [
     name: 'dropdown',
     description: '下拉列表，通常是 `<el-dropdown-menu>` 组件'
   }
-]
+];
 
-export const document: ElDocument = { attributes, events, slots }
+export const document: ElDocument = { attributes, events, slots };
 
-export default document
+export default document;

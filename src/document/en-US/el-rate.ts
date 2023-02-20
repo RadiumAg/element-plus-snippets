@@ -1,6 +1,6 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentEvent } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentEvent } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   { name: 'value/v-model', description: 'binding value', type: 'number', value: '—', default: '0' },
@@ -34,10 +34,10 @@ export const attributes: DocumentAttribute[] = [
   { name: 'text-color', description: 'color of texts', type: 'string', value: '—', default: '#1F2D3D' },
   { name: 'texts', description: 'text array', type: 'array', value: '—', default: "['极差', '失望', '一般', '满意', '惊喜']" },
   { name: 'score-template', description: 'score template', type: 'string', value: '—', default: '{value}' }
-]
+];
 
-export const events: DocumentEvent[] = [{ name: 'change', description: 'Triggers when rate value is changed', parameter: 'value after changing' }]
+export const events: DocumentEvent[] = [{ name: 'change', description: 'Triggers when rate value is changed', parameter: 'value after changing' }];
 
-export const document: ElDocument = { attributes, events }
+export const document: ElDocument = { attributes, events };
 
-export default document
+export default document;

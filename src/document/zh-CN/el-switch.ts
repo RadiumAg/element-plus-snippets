@@ -1,7 +1,7 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentMethod } from '@/document'
-import { DocumentEvent } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentMethod } from '@/document';
+import { DocumentEvent } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -95,9 +95,9 @@ export const attributes: DocumentAttribute[] = [
     value: '-',
     default: 'true'
   }
-]
+];
 
-export const methods: DocumentMethod[] = [{ name: 'focus', description: '使 Switch 获取焦点', parameter: '-' }]
+export const methods: DocumentMethod[] = [{ name: 'focus', description: '使 Switch 获取焦点', parameter: '-' }];
 
 export const events: DocumentEvent[] = [
   {
@@ -105,8 +105,8 @@ export const events: DocumentEvent[] = [
     description: 'switch 状态发生变化时的回调函数',
     parameter: '新状态的值'
   }
-]
+];
 
-export const document: ElDocument = { attributes, methods, events }
+export const document: ElDocument = { attributes, methods, events };
 
-export default document
+export default document;

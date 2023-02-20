@@ -1,8 +1,8 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentMethod } from '@/document'
-import { DocumentEvent } from '@/document'
-import { DocumentSlot } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentMethod } from '@/document';
+import { DocumentEvent } from '@/document';
+import { DocumentSlot } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -103,7 +103,7 @@ export const attributes: DocumentAttribute[] = [
     value: '-',
     default: 'true'
   }
-]
+];
 
 export const methods: DocumentMethod[] = [
   {
@@ -111,7 +111,7 @@ export const methods: DocumentMethod[] = [
     description: '用于关闭 Drawer, 该方法会调用传入的 `before-close` 方法',
     parameter: ''
   }
-]
+];
 
 export const events: DocumentEvent[] = [
   { name: 'open', description: 'Drawer 打开的回调', parameter: '—' },
@@ -126,13 +126,13 @@ export const events: DocumentEvent[] = [
     description: 'Drawer 关闭动画结束时的回调',
     parameter: '—'
   }
-]
+];
 
 export const slots: DocumentSlot[] = [
   { name: '—', description: 'Drawer 的内容' },
   { name: 'title', description: 'Drawer 标题区的内容' }
-]
+];
 
-export const document: ElDocument = { attributes, methods, events, slots }
+export const document: ElDocument = { attributes, methods, events, slots };
 
-export default document
+export default document;

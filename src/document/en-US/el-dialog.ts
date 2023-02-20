@@ -1,7 +1,7 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentEvent } from '@/document'
-import { DocumentSlot } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentEvent } from '@/document';
+import { DocumentSlot } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   { name: 'visible', description: 'visibility of Dialog, supports the .sync modifier', type: 'boolean', value: '—', default: 'false' },
@@ -26,21 +26,21 @@ export const attributes: DocumentAttribute[] = [
   { name: 'before-close', description: 'callback before Dialog closes, and it will prevent Dialog from closing', type: 'function(done)，done is used to close the Dialog', value: '—', default: '—' },
   { name: 'center', description: 'whether to align the header and footer in center', type: 'boolean', value: '—', default: 'false' },
   { name: 'destroy-on-close', description: 'Destroy elements in Dialog when closed', type: 'boolean', value: '—', default: 'false' }
-]
+];
 
 export const events: DocumentEvent[] = [
   { name: 'open', description: 'triggers when the Dialog opens', parameter: '—' },
   { name: 'opened', description: 'triggers when the Dialog opening animation ends', parameter: '—' },
   { name: 'close', description: 'triggers when the Dialog closes', parameter: '—' },
   { name: 'closed', description: 'triggers when the Dialog closing animation ends', parameter: '—' }
-]
+];
 
 export const slots: DocumentSlot[] = [
   { name: '—', description: 'content of Dialog' },
   { name: 'title', description: 'content of the Dialog title' },
   { name: 'footer', description: 'content of the Dialog footer' }
-]
+];
 
-export const document: ElDocument = { attributes, events, slots }
+export const document: ElDocument = { attributes, events, slots };
 
-export default document
+export default document;

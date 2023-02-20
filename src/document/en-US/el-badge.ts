@@ -1,5 +1,5 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   { name: 'value', description: 'display value', type: 'string, number', value: '—', default: '—' },
@@ -7,8 +7,8 @@ export const attributes: DocumentAttribute[] = [
   { name: 'is-dot', description: 'if a little dot is displayed', type: 'boolean', value: '—', default: 'false' },
   { name: 'hidden', description: 'hidden badge', type: 'boolean', value: '—', default: 'false' },
   { name: 'type', description: 'button type', type: 'string', value: 'primary / success / warning / danger / info', default: '—' }
-]
+];
 
-export const document: ElDocument = { attributes }
+export const document: ElDocument = { attributes };
 
-export default document
+export default document;

@@ -1,5 +1,5 @@
-import { DocumentSlot, ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
+import { DocumentSlot, ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -23,14 +23,14 @@ export const attributes: DocumentAttribute[] = [
     value: '—',
     default: '—'
   }
-]
+];
 
 export const slots: DocumentSlot[] = [
   { name: 'default', description: '自定义底部内容' },
   { name: 'image', description: '自定义图片' },
   { name: 'description', description: '自定义描述文字' }
-]
+];
 
-export const document: ElDocument = { attributes, slots }
+export const document: ElDocument = { attributes, slots };
 
-export default document
+export default document;

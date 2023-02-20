@@ -1,5 +1,5 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   { name: 'effect', description: 'Tooltip theme', type: 'string', value: 'dark/light', default: 'dark' },
@@ -35,8 +35,8 @@ export const attributes: DocumentAttribute[] = [
   { name: 'enterable', description: 'whether the mouse can enter the tooltip', type: 'Boolean', value: '—', default: 'true' },
   { name: 'hide-after', description: 'timeout in milliseconds to hide tooltip', type: 'number', value: '—', default: '0' },
   { name: 'tabindex', description: '[tabindex](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) of Tooltip', type: 'number', value: '—', default: '0' }
-]
+];
 
-export const document: ElDocument = { attributes }
+export const document: ElDocument = { attributes };
 
-export default document
+export default document;

@@ -1,8 +1,8 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentMethod } from '@/document'
-import { DocumentEvent } from '@/document'
-import { DocumentSlot } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentMethod } from '@/document';
+import { DocumentEvent } from '@/document';
+import { DocumentSlot } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -44,22 +44,22 @@ export const attributes: DocumentAttribute[] = [
     value: '-',
     default: 'true'
   }
-]
+];
 
-export const methods: DocumentMethod[] = [{ name: 'closeDrawer', description: 'In order to close Drawer, this method will call `before-close`.', parameter: '' }]
+export const methods: DocumentMethod[] = [{ name: 'closeDrawer', description: 'In order to close Drawer, this method will call `before-close`.', parameter: '' }];
 
 export const events: DocumentEvent[] = [
   { name: 'open', description: 'Triggered before Drawer opening animation begins', parameter: '—' },
   { name: 'opened', description: 'Triggered after Drawer opening animation ended', parameter: '—' },
   { name: 'close', description: 'Triggered before Drawer closing animation begins', parameter: '—' },
   { name: 'closed', description: 'Triggered after Drawer closing animation ended', parameter: '—' }
-]
+];
 
 export const slots: DocumentSlot[] = [
   { name: '—', description: "Drawer's Content" },
   { name: 'title', description: 'Drawer Title Section' }
-]
+];
 
-export const document: ElDocument = { attributes, methods, events, slots }
+export const document: ElDocument = { attributes, methods, events, slots };
 
-export default document
+export default document;

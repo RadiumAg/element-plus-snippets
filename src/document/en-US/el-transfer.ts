@@ -1,9 +1,9 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentMethod } from '@/document'
-import { DocumentEvent } from '@/document'
-import { DocumentSlot } from '@/document'
-import { DocumentScopedSlot } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentMethod } from '@/document';
+import { DocumentEvent } from '@/document';
+import { DocumentSlot } from '@/document';
+import { DocumentScopedSlot } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   { name: 'value/v-model', description: 'binding value', type: 'array', value: '—', default: '—' },
@@ -32,9 +32,9 @@ export const attributes: DocumentAttribute[] = [
   { name: 'props', description: 'prop aliases for data source', type: 'object{key, label, disabled}', value: '—', default: '—' },
   { name: 'left-default-checked', description: 'key array of initially checked data items of the left list', type: 'array', value: '—', default: '[ ]' },
   { name: 'right-default-checked', description: 'key array of initially checked data items of the right list', type: 'array', value: '—', default: '[ ]' }
-]
+];
 
-export const methods: DocumentMethod[] = [{ name: 'clearQuery', description: 'clear the filter keyword of a certain panel', parameter: "'left' / 'right'" }]
+export const methods: DocumentMethod[] = [{ name: 'clearQuery', description: 'clear the filter keyword of a certain panel', parameter: "'left' / 'right'" }];
 
 export const events: DocumentEvent[] = [
   {
@@ -52,15 +52,15 @@ export const events: DocumentEvent[] = [
     description: 'triggers when end user changes the checked state of any data item in the right list',
     parameter: 'key array of currently checked items, key array of items whose checked state have changed'
   }
-]
+];
 
 export const slots: DocumentSlot[] = [
   { name: 'left-footer', description: 'content of left list footer' },
   { name: 'right-footer', description: 'content of right list footer' }
-]
+];
 
-export const scopedSlots: DocumentScopedSlot[] = [{ name: '—', description: 'Custom content for data items. The scope parameter is { option }' }]
+export const scopedSlots: DocumentScopedSlot[] = [{ name: '—', description: 'Custom content for data items. The scope parameter is { option }' }];
 
-export const document: ElDocument = { attributes, methods, events, slots, scopedSlots }
+export const document: ElDocument = { attributes, methods, events, slots, scopedSlots };
 
-export default document
+export default document;

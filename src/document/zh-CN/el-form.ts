@@ -1,7 +1,7 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentMethod } from '@/document'
-import { DocumentEvent } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentMethod } from '@/document';
+import { DocumentEvent } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -95,7 +95,7 @@ export const attributes: DocumentAttribute[] = [
     value: '—',
     default: 'false'
   }
-]
+];
 
 export const methods: DocumentMethod[] = [
   {
@@ -118,7 +118,7 @@ export const methods: DocumentMethod[] = [
     description: '移除表单项的校验结果。传入待移除的表单项的 prop 属性或者 prop 组成的数组，如不传则移除整个表单的校验结果',
     parameter: 'Function(props: array | string)'
   }
-]
+];
 
 export const events: DocumentEvent[] = [
   {
@@ -126,8 +126,8 @@ export const events: DocumentEvent[] = [
     description: '任一表单项被校验后触发',
     parameter: '被校验的表单项 prop 值，校验是否通过，错误消息（如果存在）'
   }
-]
+];
 
-export const document: ElDocument = { attributes, methods, events }
+export const document: ElDocument = { attributes, methods, events };
 
-export default document
+export default document;

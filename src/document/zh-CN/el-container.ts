@@ -1,5 +1,5 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -9,8 +9,8 @@ export const attributes: DocumentAttribute[] = [
     value: 'horizontal / vertical',
     default: '子元素中有 `el-header` 或 `el-footer` 时为 vertical，否则为 horizontal'
   }
-]
+];
 
-export const document: ElDocument = { attributes }
+export const document: ElDocument = { attributes };
 
-export default document
+export default document;

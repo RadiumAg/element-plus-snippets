@@ -1,7 +1,7 @@
-import { ElDocument } from '@/document'
-import { DocumentMethod } from '@/document'
-import { DocumentEvent } from '@/document'
-import { DocumentAttribute } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentMethod } from '@/document';
+import { DocumentEvent } from '@/document';
+import { DocumentAttribute } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -81,7 +81,7 @@ export const attributes: DocumentAttribute[] = [
     value: '—',
     default: true
   }
-]
+];
 
 export const methods: DocumentMethod[] = [
   {
@@ -94,7 +94,7 @@ export const methods: DocumentMethod[] = [
     description: '收起指定的 sub-menu',
     parameter: 'index: 需要收起的 sub-menu 的 index'
   }
-]
+];
 
 export const events: DocumentEvent[] = [
   {
@@ -112,8 +112,8 @@ export const events: DocumentEvent[] = [
     description: 'sub-menu 收起的回调',
     parameter: 'index: 收起的 sub-menu 的 index， indexPath: 收起的 sub-menu 的 index path'
   }
-]
+];
 
-export const document: ElDocument = { methods, events, attributes }
+export const document: ElDocument = { methods, events, attributes };
 
-export default document
+export default document;

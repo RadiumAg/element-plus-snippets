@@ -1,6 +1,6 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentEvent } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentEvent } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -52,7 +52,7 @@ export const attributes: DocumentAttribute[] = [
     value: '—',
     default: '#409EFF'
   }
-]
+];
 
 export const events: DocumentEvent[] = [
   {
@@ -60,8 +60,8 @@ export const events: DocumentEvent[] = [
     description: '当绑定值变化时触发的事件',
     parameter: '更新后的值'
   }
-]
+];
 
-export const document: ElDocument = { attributes, events }
+export const document: ElDocument = { attributes, events };
 
-export default document
+export default document;

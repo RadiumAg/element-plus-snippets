@@ -1,7 +1,7 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentEvent } from '@/document'
-import { DocumentSlot } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentEvent } from '@/document';
+import { DocumentSlot } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -60,18 +60,18 @@ export const attributes: DocumentAttribute[] = [
     value: '—',
     default: '2000'
   }
-]
+];
 
 export const events: DocumentEvent[] = [
   { name: 'load', description: '图片加载成功触发', parameter: '(e: Event)' },
   { name: 'error', description: '图片加载失败触发', parameter: '(e: Error)' }
-]
+];
 
 export const slots: DocumentSlot[] = [
   { name: 'placeholder', description: '图片未加载的占位内容' },
   { name: 'error', description: '加载失败的内容' }
-]
+];
 
-export const document: ElDocument = { attributes, events, slots }
+export const document: ElDocument = { attributes, events, slots };
 
-export default document
+export default document;

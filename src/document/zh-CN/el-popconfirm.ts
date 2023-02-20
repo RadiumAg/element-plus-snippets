@@ -1,7 +1,7 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentEvent } from '@/document'
-import { DocumentSlot } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentEvent } from '@/document';
+import { DocumentSlot } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -60,15 +60,15 @@ export const attributes: DocumentAttribute[] = [
     value: '—',
     default: 'false'
   }
-]
+];
 
 export const events: DocumentEvent[] = [
   { name: 'confirm', description: '点击确认按钮时触发', parameter: '—' },
   { name: 'cancel', description: '点击取消按钮时触发', parameter: '—' }
-]
+];
 
-export const slots: DocumentSlot[] = [{ name: 'reference', description: '触发 Popconfirm 显示的 HTML 元素' }]
+export const slots: DocumentSlot[] = [{ name: 'reference', description: '触发 Popconfirm 显示的 HTML 元素' }];
 
-export const document: ElDocument = { attributes, events, slots }
+export const document: ElDocument = { attributes, events, slots };
 
-export default document
+export default document;

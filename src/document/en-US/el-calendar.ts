@@ -1,5 +1,5 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   { name: 'value/v-model', description: 'binding value', type: 'Date/string/number', value: '—', default: '—' },
@@ -11,8 +11,8 @@ export const attributes: DocumentAttribute[] = [
     default: '—'
   },
   { name: 'first-day-of-week', description: 'fisrt day of week', type: 'Number', value: '1 to 7', default: '1' }
-]
+];
 
-export const document: ElDocument = { attributes }
+export const document: ElDocument = { attributes };
 
-export default document
+export default document;

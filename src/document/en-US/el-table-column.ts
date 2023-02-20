@@ -1,6 +1,6 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentScopedSlot } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentScopedSlot } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -87,13 +87,13 @@ export const attributes: DocumentAttribute[] = [
     default: '—'
   },
   { name: 'filtered-value', description: 'filter value for selected data, might be useful when table header is rendered with `render-header`', type: 'Array', value: '—', default: '—' }
-]
+];
 
 export const scopedSlots: DocumentScopedSlot[] = [
   { name: '—', description: 'Custom content for table columns. The scope parameter is { row, column, $index }' },
   { name: 'header', description: 'Custom content for table header. The scope parameter is { column, $index }' }
-]
+];
 
-export const document: ElDocument = { attributes, scopedSlots }
+export const document: ElDocument = { attributes, scopedSlots };
 
-export default document
+export default document;

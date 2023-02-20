@@ -1,8 +1,8 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentEvent } from '@/document'
-import { DocumentScopedSlot } from '@/document'
-import { DocumentMethod } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentEvent } from '@/document';
+import { DocumentScopedSlot } from '@/document';
+import { DocumentMethod } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   { name: 'data', description: 'tree data', type: 'array', value: '—', default: '—' },
@@ -67,7 +67,7 @@ export const attributes: DocumentAttribute[] = [
   { name: 'children', description: "specify which node object is used as the node's subtree", type: 'string', value: '—', default: '—' },
   { name: 'disabled', description: "specify which key of node object represents if node's checkbox is disabled", type: 'boolean, function(data, node)', value: '—', default: '—' },
   { name: 'isLeaf', description: 'specify whether the node is a leaf node, only works when lazy load is enabled', type: 'boolean, function(data, node)', value: '—', default: '—' }
-]
+];
 
 export const methods: DocumentMethod[] = [
   {
@@ -163,7 +163,7 @@ export const methods: DocumentMethod[] = [
     description: 'insert a node after a given node in the tree',
     parameter: "(data, refNode) 1. node's data to be inserted 2. reference node's data, key or node"
   }
-]
+];
 
 export const events: DocumentEvent[] = [
   { name: 'node-click', description: 'triggers when a node is clicked', parameter: 'three parameters: node object corresponding to the node clicked, `node` property of TreeNode, TreeNode itself' },
@@ -213,10 +213,10 @@ export const events: DocumentEvent[] = [
     description: 'triggers after the dragging node is dropped',
     parameter: 'four parameters: node object corresponding to the dragging node, node object corresponding to the dropped node, node drop type (before / after / inner), event.'
   }
-]
+];
 
-export const scopedSlots: DocumentScopedSlot[] = [{ name: '—', description: 'Custom content for tree nodes. The scope parameter is { node, data }' }]
+export const scopedSlots: DocumentScopedSlot[] = [{ name: '—', description: 'Custom content for tree nodes. The scope parameter is { node, data }' }];
 
-export const document: ElDocument = { attributes, events, scopedSlots }
+export const document: ElDocument = { attributes, events, scopedSlots };
 
-export default document
+export default document;

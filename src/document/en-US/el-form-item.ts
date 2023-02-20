@@ -1,8 +1,8 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentMethod } from '@/document'
-import { DocumentSlot } from '@/document'
-import { DocumentScopedSlot } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentMethod } from '@/document';
+import { DocumentSlot } from '@/document';
+import { DocumentScopedSlot } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -20,20 +20,20 @@ export const attributes: DocumentAttribute[] = [
   { name: 'show-message', description: 'whether to show the error message', type: 'boolean', value: '—', default: 'true' },
   { name: 'inline-message', description: 'inline style validate message', type: 'boolean', value: '—', default: 'false' },
   { name: 'size', description: 'control the size of components in this form-item', type: 'string', value: 'medium / small / mini', default: '-' }
-]
+];
 
 export const methods: DocumentMethod[] = [
   { name: 'resetField', description: 'reset current field and remove validation result', parameter: '—' },
   { name: 'clearValidate', description: 'remove validation status of the field', parameter: '-' }
-]
+];
 
 export const slots: DocumentSlot[] = [
   { name: '—', description: 'content of Form Item' },
   { name: 'label', description: 'content of label' }
-]
+];
 
-export const scopedSlots: DocumentScopedSlot[] = [{ name: 'error', description: 'Custom content to display validation message. The scope parameter is { error }' }]
+export const scopedSlots: DocumentScopedSlot[] = [{ name: 'error', description: 'Custom content to display validation message. The scope parameter is { error }' }];
 
-export const document: ElDocument = { attributes, methods, slots, scopedSlots }
+export const document: ElDocument = { attributes, methods, slots, scopedSlots };
 
-export default document
+export default document;

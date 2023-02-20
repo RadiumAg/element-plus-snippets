@@ -1,6 +1,6 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentScopedSlot } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentScopedSlot } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -193,7 +193,7 @@ export const attributes: DocumentAttribute[] = [
     value: '—',
     default: '—'
   }
-]
+];
 
 export const scopedSlots: DocumentScopedSlot[] = [
   { name: '—', description: '自定义列的内容，参数为 { row, column, $index }' },
@@ -201,8 +201,8 @@ export const scopedSlots: DocumentScopedSlot[] = [
     name: 'header',
     description: '自定义表头的内容. 参数为 { column, $index }'
   }
-]
+];
 
-export const document: ElDocument = { attributes, scopedSlots }
+export const document: ElDocument = { attributes, scopedSlots };
 
-export default document
+export default document;

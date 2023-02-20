@@ -1,6 +1,6 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentEvent } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentEvent } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -17,7 +17,7 @@ export const attributes: DocumentAttribute[] = [
     value: '—',
     default: 'false'
   }
-]
+];
 
 export const events: DocumentEvent[] = [
   {
@@ -25,8 +25,8 @@ export const events: DocumentEvent[] = [
     description: '当前激活面板改变时触发(如果是手风琴模式，参数 `activeNames` 类型为`string`，否则为`array`)',
     parameter: '(activeNames: array / string)'
   }
-]
+];
 
-export const document: ElDocument = { attributes, events }
+export const document: ElDocument = { attributes, events };
 
-export default document
+export default document;

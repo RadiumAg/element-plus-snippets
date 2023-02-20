@@ -1,4 +1,4 @@
-import { ExtensionLanguage } from '../'
+import { ExtensionLanguage } from '../';
 
 /**
  * 文档属性类型
@@ -68,7 +68,7 @@ export interface DocumentSlot {
  * @export
  * @interface DocumentScopedSlot
  */
-export type DocumentScopedSlot = DocumentSlot
+export type DocumentScopedSlot = DocumentSlot;
 
 /**
  * 基础文档接口
@@ -105,13 +105,13 @@ export interface ElDocument extends BaseDocument {
  * @export
  * @type LocalDocument
  */
-export type LocalDocument = Record<string, Record<string, any>>
+export type LocalDocument = Record<string, Record<string, any>>;
 
-import CnDocument from './zh-CN'
-import EnDocument from './en-US'
+import CnDocument from './zh-CN';
+import EnDocument from './en-US';
 
 // 统一导出文档
 export const localDocument: LocalDocument = {
   [ExtensionLanguage.en]: EnDocument,
   [ExtensionLanguage.cn]: CnDocument
-}
+};

@@ -1,9 +1,9 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentMethod } from '@/document'
-import { DocumentEvent } from '@/document'
-import { DocumentSlot } from '@/document'
-import { DocumentScopedSlot } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentMethod } from '@/document';
+import { DocumentEvent } from '@/document';
+import { DocumentSlot } from '@/document';
+import { DocumentScopedSlot } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -125,9 +125,9 @@ export const attributes: DocumentAttribute[] = [
     value: '—',
     default: 'false'
   }
-]
+];
 
-export const methods: DocumentMethod[] = [{ name: 'focus', description: '使 input 获取焦点', parameter: '-' }]
+export const methods: DocumentMethod[] = [{ name: 'focus', description: '使 input 获取焦点', parameter: '-' }];
 
 export const events: DocumentEvent[] = [
   {
@@ -140,16 +140,16 @@ export const events: DocumentEvent[] = [
     description: '在 Input 值改变时触发',
     parameter: '(value: string \\'
   }
-]
+];
 
 export const slots: DocumentSlot[] = [
   { name: 'prefix', description: '输入框头部内容' },
   { name: 'suffix', description: '输入框尾部内容' },
   { name: 'prepend', description: '输入框前置内容' },
   { name: 'append', description: '输入框后置内容' }
-]
+];
 
-export const scopedSlots: DocumentScopedSlot[] = [{ name: '—', description: '自定义输入建议，参数为 { item }' }]
+export const scopedSlots: DocumentScopedSlot[] = [{ name: '—', description: '自定义输入建议，参数为 { item }' }];
 
 export const document: ElDocument = {
   attributes,
@@ -157,6 +157,6 @@ export const document: ElDocument = {
   events,
   slots,
   scopedSlots
-}
+};
 
-export default document
+export default document;

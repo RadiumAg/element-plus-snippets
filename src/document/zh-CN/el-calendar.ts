@@ -1,5 +1,5 @@
-import { DocumentSlot, ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
+import { DocumentSlot, ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -23,7 +23,7 @@ export const attributes: DocumentAttribute[] = [
     value: '1 到 7',
     default: 1
   }
-]
+];
 
 export const slots: DocumentSlot[] = [
   {
@@ -34,8 +34,8 @@ export const slots: DocumentSlot[] = [
     name: 'data',
     description: '{ type, isSelected, day}，type 表示该日期的所属月份，可选值有 prev-month，current-month，next-month；isSelected 标明该日期是否被选中；day 是格式化的日期，格式为 yyyy-MM-dd'
   }
-]
+];
 
-export const document: ElDocument = { attributes, slots }
+export const document: ElDocument = { attributes, slots };
 
-export default document
+export default document;

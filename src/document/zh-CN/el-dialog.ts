@@ -1,7 +1,7 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentEvent } from '@/document'
-import { DocumentSlot } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentEvent } from '@/document';
+import { DocumentSlot } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -116,7 +116,7 @@ export const attributes: DocumentAttribute[] = [
     value: '—',
     default: 'false'
   }
-]
+];
 
 export const events: DocumentEvent[] = [
   { name: 'open', description: 'Dialog 打开的回调', parameter: '—' },
@@ -131,14 +131,14 @@ export const events: DocumentEvent[] = [
     description: 'Dialog 关闭动画结束时的回调',
     parameter: '—'
   }
-]
+];
 
 export const slots: DocumentSlot[] = [
   { name: '—', description: 'Dialog 的内容' },
   { name: 'title', description: 'Dialog 标题区的内容' },
   { name: 'footer', description: 'Dialog 按钮操作区的内容' }
-]
+];
 
-export const document: ElDocument = { attributes, events, slots }
+export const document: ElDocument = { attributes, events, slots };
 
-export default document
+export default document;

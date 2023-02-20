@@ -1,6 +1,6 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentEvent } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentEvent } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   { name: 'value/v-model', description: 'binding value', type: 'string / number / boolean', value: '—', default: '—' },
@@ -13,10 +13,10 @@ export const attributes: DocumentAttribute[] = [
   { name: 'name', description: "native 'name' attribute", type: 'string', value: '—', default: '—' },
   { name: 'checked', description: 'if the Checkbox is checked', type: 'boolean', value: '—', default: 'false' },
   { name: 'indeterminate', description: 'same as `indeterminate` in native checkbox', type: 'boolean', value: '—', default: 'false' }
-]
+];
 
-export const events: DocumentEvent[] = [{ name: 'change', description: 'triggers when the binding value changes', parameter: 'the updated value' }]
+export const events: DocumentEvent[] = [{ name: 'change', description: 'triggers when the binding value changes', parameter: 'the updated value' }];
 
-export const document: ElDocument = { attributes, events }
+export const document: ElDocument = { attributes, events };
 
-export default document
+export default document;

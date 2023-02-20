@@ -1,9 +1,9 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentMethod } from '@/document'
-import { DocumentEvent } from '@/document'
-import { DocumentSlot } from '@/document'
-import { DocumentScopedSlot } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentMethod } from '@/document';
+import { DocumentEvent } from '@/document';
+import { DocumentSlot } from '@/document';
+import { DocumentScopedSlot } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -97,7 +97,7 @@ export const attributes: DocumentAttribute[] = [
     value: '—',
     default: '[ ]'
   }
-]
+];
 
 export const methods: DocumentMethod[] = [
   {
@@ -105,7 +105,7 @@ export const methods: DocumentMethod[] = [
     description: '清空某个面板的搜索关键词',
     parameter: "'left' / 'right'，指定需要清空的面板"
   }
-]
+];
 
 export const events: DocumentEvent[] = [
   {
@@ -123,14 +123,14 @@ export const events: DocumentEvent[] = [
     description: '右侧列表元素被用户选中 / 取消选中时触发',
     parameter: '当前被选中的元素的 key 数组、选中状态发生变化的元素的 key 数组'
   }
-]
+];
 
 export const slots: DocumentSlot[] = [
   { name: 'left-footer', description: '左侧列表底部的内容' },
   { name: 'right-footer', description: '右侧列表底部的内容' }
-]
+];
 
-export const scopedSlots: DocumentScopedSlot[] = [{ name: '—', description: '自定义数据项的内容，参数为 { option }' }]
+export const scopedSlots: DocumentScopedSlot[] = [{ name: '—', description: '自定义数据项的内容，参数为 { option }' }];
 
 export const document: ElDocument = {
   attributes,
@@ -138,6 +138,6 @@ export const document: ElDocument = {
   events,
   slots,
   scopedSlots
-}
+};
 
-export default document
+export default document;

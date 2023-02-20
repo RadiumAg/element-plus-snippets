@@ -1,8 +1,8 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentMethod } from '@/document'
-import { DocumentEvent } from '@/document'
-import { DocumentSlot } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentMethod } from '@/document';
+import { DocumentEvent } from '@/document';
+import { DocumentSlot } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -237,7 +237,7 @@ export const attributes: DocumentAttribute[] = [
     value: '—',
     default: "{ hasChildren: 'hasChildren', children: 'children' }"
   }
-]
+];
 
 export const methods: DocumentMethod[] = [
   {
@@ -285,7 +285,7 @@ export const methods: DocumentMethod[] = [
     description: '手动对 Table 进行排序。参数`prop`属性指定排序列，`order`指定排序顺序。',
     parameter: 'prop: string, order: string'
   }
-]
+];
 
 export const events: DocumentEvent[] = [
   {
@@ -373,15 +373,15 @@ export const events: DocumentEvent[] = [
     description: '当用户对某一行展开或者关闭的时候会触发该事件（展开行时，回调的第二个参数为 expandedRows；树形表格时第二参数为 expanded）',
     parameter: 'row, (expandedRows \\'
   }
-]
+];
 
 export const slots: DocumentSlot[] = [
   {
     name: 'append',
     description: '插入至表格最后一行之后的内容，如果需要对表格的内容进行无限滚动操作，可能需要用到这个 slot。若表格有合计行，该 slot 会位于合计行之上。'
   }
-]
+];
 
-export const document: ElDocument = { attributes, methods, events, slots }
+export const document: ElDocument = { attributes, methods, events, slots };
 
-export default document
+export default document;

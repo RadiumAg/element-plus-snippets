@@ -1,7 +1,7 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentEvent } from '@/document'
-import { DocumentSlot } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentEvent } from '@/document';
+import { DocumentSlot } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   { name: 'trigger', description: 'how the popover is triggered', type: 'string', value: 'click/focus/hover/manual', default: 'click' },
@@ -37,20 +37,20 @@ export const attributes: DocumentAttribute[] = [
   { name: 'open-delay', description: 'delay before appearing when `trigger` is hover, in milliseconds', type: 'number', value: '—', default: '—' },
   { name: 'close-delay', description: 'delay before disappearing when `trigger` is hover, in milliseconds', type: 'number', value: '—', default: '200' },
   { name: 'tabindex', description: '[tabindex](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) of Popover', type: 'number', value: '—', default: '0' }
-]
+];
 
 export const events: DocumentEvent[] = [
   { name: 'show', description: 'triggers when popover shows', parameter: '—' },
   { name: 'after-enter', description: 'triggers when the entering transition ends', parameter: '—' },
   { name: 'hide', description: 'triggers when popover hides', parameter: '—' },
   { name: 'after-leave', description: 'triggers when the leaving transition ends', parameter: '—' }
-]
+];
 
 export const slots: DocumentSlot[] = [
   { name: '—', description: 'text content of popover' },
   { name: 'reference', description: 'HTML element that triggers popover' }
-]
+];
 
-export const document: ElDocument = { attributes, events, slots }
+export const document: ElDocument = { attributes, events, slots };
 
-export default document
+export default document;

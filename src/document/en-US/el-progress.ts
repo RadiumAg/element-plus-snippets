@@ -1,5 +1,5 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   { name: '**percentage**', description: 'percentage, **required**', type: 'number', value: '0-100', default: '0' },
@@ -12,8 +12,8 @@ export const attributes: DocumentAttribute[] = [
   { name: 'show-text', description: 'whether to show percentage', type: 'boolean', value: '—', default: 'true' },
   { name: 'stroke-linecap', description: 'circle/dashboard type shape at the end path', type: 'string', value: 'butt/round/square', default: 'round' },
   { name: 'format', description: 'custom text format', type: 'function(percentage)', value: '—', default: '—' }
-]
+];
 
-export const document: ElDocument = { attributes }
+export const document: ElDocument = { attributes };
 
-export default document
+export default document;

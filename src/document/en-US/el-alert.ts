@@ -1,7 +1,7 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentEvent } from '@/document'
-import { DocumentSlot } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentEvent } from '@/document';
+import { DocumentSlot } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   { name: 'title', description: 'title', type: 'string', value: '—', default: '—' },
@@ -12,15 +12,15 @@ export const attributes: DocumentAttribute[] = [
   { name: 'close-text', description: 'Customized close button text', type: 'string', value: '—', default: '—' },
   { name: 'show-icon', description: 'If a type icon is displayed', type: 'boolean', value: '—', default: 'false' },
   { name: 'effect', description: 'Choose theme', type: 'string', value: 'light/dark', default: 'light' }
-]
+];
 
-export const events: DocumentEvent[] = [{ name: 'close', description: 'fires when alert is closed', parameter: '—' }]
+export const events: DocumentEvent[] = [{ name: 'close', description: 'fires when alert is closed', parameter: '—' }];
 
 export const slots: DocumentSlot[] = [
   { name: '—', description: 'description' },
   { name: 'title', description: 'content of the Alert title' }
-]
+];
 
-export const document: ElDocument = { attributes, events, slots }
+export const document: ElDocument = { attributes, events, slots };
 
-export default document
+export default document;

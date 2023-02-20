@@ -1,8 +1,8 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentMethod } from '@/document'
-import { DocumentEvent } from '@/document'
-import { DocumentSlot } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentMethod } from '@/document';
+import { DocumentEvent } from '@/document';
+import { DocumentSlot } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   { name: 'value/v-model', description: 'binding value', type: 'date(DatePicker) / array(DateRangePicker)', value: '—', default: '—' },
@@ -40,17 +40,17 @@ export const attributes: DocumentAttribute[] = [
   { name: 'prefix-icon', description: 'Custom prefix icon class', type: 'string', value: '—', default: 'el-icon-date' },
   { name: 'clear-icon', description: 'Custom clear icon class', type: 'string', value: '—', default: 'el-icon-circle-close' },
   { name: 'validate-event', description: 'whether to trigger form validation', type: 'boolean', value: '-', default: 'true' }
-]
+];
 
-export const methods: DocumentMethod[] = [{ name: 'focus', description: 'focus the Input component', parameter: '—' }]
+export const methods: DocumentMethod[] = [{ name: 'focus', description: 'focus the Input component', parameter: '—' }];
 
 export const events: DocumentEvent[] = [
   { name: 'change', description: 'triggers when user confirms the value', parameter: "component's binding value" },
   { name: 'blur', description: 'triggers when Input blurs', parameter: 'component instance' },
   { name: 'focus', description: 'triggers when Input focuses', parameter: 'component instance' }
-]
+];
 
-export const slots: DocumentSlot[] = [{ name: 'range-separator', description: 'custom range separator content' }]
+export const slots: DocumentSlot[] = [{ name: 'range-separator', description: 'custom range separator content' }];
 
 export const pickerOptions: DocumentAttribute[] = [
   {
@@ -88,7 +88,7 @@ export const pickerOptions: DocumentAttribute[] = [
     value: '—',
     default: '—'
   }
-]
+];
 
 export const shortcuts: DocumentAttribute[] = [
   { name: 'text', description: 'title of the shortcut', type: 'string', value: '—', default: '—' },
@@ -100,8 +100,8 @@ export const shortcuts: DocumentAttribute[] = [
     value: '—',
     default: '—'
   }
-]
+];
 
-export const document: ElDocument = { attributes, methods, events, slots, pickerOptions, shortcuts }
+export const document: ElDocument = { attributes, methods, events, slots, pickerOptions, shortcuts };
 
-export default document
+export default document;

@@ -1,8 +1,8 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentMethod } from '@/document'
-import { DocumentEvent } from '@/document'
-import { DocumentSlot } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentMethod } from '@/document';
+import { DocumentEvent } from '@/document';
+import { DocumentSlot } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   { name: 'value/v-model', description: 'binding value', type: 'boolean / string / number', value: '—', default: '—' },
@@ -37,12 +37,12 @@ export const attributes: DocumentAttribute[] = [
     default: 'true'
   },
   { name: 'automatic-dropdown', description: 'for non-filterable Select, this prop decides if the option menu pops up when the input is focused', type: 'boolean', value: '-', default: 'false' }
-]
+];
 
 export const methods: DocumentMethod[] = [
   { name: 'focus', description: 'focus the Input component', parameter: '-' },
   { name: 'blur', description: 'blur the Input component, and hide the dropdown', parameter: '-' }
-]
+];
 
 export const events: DocumentEvent[] = [
   { name: 'change', description: 'triggers when the selected value changes', parameter: 'current selected value' },
@@ -51,14 +51,14 @@ export const events: DocumentEvent[] = [
   { name: 'clear', description: 'triggers when the clear icon is clicked in a clearable Select', parameter: '—' },
   { name: 'blur', description: 'triggers when Input blurs', parameter: '(event: Event)' },
   { name: 'focus', description: 'triggers when Input focuses', parameter: '(event: Event)' }
-]
+];
 
 export const slots: DocumentSlot[] = [
   { name: '—', description: 'Option component list' },
   { name: 'prefix', description: 'content as Select prefix' },
   { name: 'empty', description: 'content when there is no options' }
-]
+];
 
-export const document: ElDocument = { attributes, methods, events, slots }
+export const document: ElDocument = { attributes, methods, events, slots };
 
-export default document
+export default document;

@@ -1,6 +1,6 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentEvent } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentEvent } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -45,10 +45,10 @@ export const attributes: DocumentAttribute[] = [
     value: '—',
     default: '—'
   }
-]
+];
 
-export const events: DocumentEvent[] = [{ name: 'change', description: 'triggers when the bound value changes', parameter: 'the label value of the chosen radio' }]
+export const events: DocumentEvent[] = [{ name: 'change', description: 'triggers when the bound value changes', parameter: 'the label value of the chosen radio' }];
 
-export const document: ElDocument = { attributes, events }
+export const document: ElDocument = { attributes, events };
 
-export default document
+export default document;

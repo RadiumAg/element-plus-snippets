@@ -1,6 +1,6 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentEvent } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentEvent } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -59,7 +59,7 @@ export const attributes: DocumentAttribute[] = [
     value: '—',
     default: '—'
   }
-]
+];
 
 export const events: DocumentEvent[] = [
   {
@@ -82,8 +82,8 @@ export const events: DocumentEvent[] = [
     description: '点击 tabs 的新增按钮或 tab 被关闭后触发',
     parameter: '(targetName, action)'
   }
-]
+];
 
-export const document: ElDocument = { attributes, events }
+export const document: ElDocument = { attributes, events };
 
-export default document
+export default document;

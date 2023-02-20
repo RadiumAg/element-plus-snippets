@@ -1,7 +1,7 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentEvent } from '@/document'
-import { DocumentSlot } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentEvent } from '@/document';
+import { DocumentSlot } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -102,7 +102,7 @@ export const attributes: DocumentAttribute[] = [
     value: '—',
     default: '-'
   }
-]
+];
 
 export const events: DocumentEvent[] = [
   {
@@ -125,10 +125,10 @@ export const events: DocumentEvent[] = [
     description: '用户点击下一页按钮改变当前页后触发',
     parameter: '当前页'
   }
-]
+];
 
-export const slots: DocumentSlot[] = [{ name: '—', description: '自定义内容，需要在 `layout` 中列出 `slot`' }]
+export const slots: DocumentSlot[] = [{ name: '—', description: '自定义内容，需要在 `layout` 中列出 `slot`' }];
 
-export const document: ElDocument = { attributes, events, slots }
+export const document: ElDocument = { attributes, events, slots };
 
-export default document
+export default document;

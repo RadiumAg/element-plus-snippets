@@ -1,8 +1,8 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentMethod } from '@/document'
-import { DocumentEvent } from '@/document'
-import { DocumentSlot } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentMethod } from '@/document';
+import { DocumentEvent } from '@/document';
+import { DocumentSlot } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -187,7 +187,7 @@ export const attributes: DocumentAttribute[] = [
     value: '-',
     default: 'false'
   }
-]
+];
 
 export const methods: DocumentMethod[] = [
   { name: 'focus', description: '使 input 获取焦点', parameter: '-' },
@@ -196,7 +196,7 @@ export const methods: DocumentMethod[] = [
     description: '使 input 失去焦点，并隐藏下拉框',
     parameter: '-'
   }
-]
+];
 
 export const events: DocumentEvent[] = [
   {
@@ -229,14 +229,14 @@ export const events: DocumentEvent[] = [
     description: '当 input 获得焦点时触发',
     parameter: '(event: Event)'
   }
-]
+];
 
 export const slots: DocumentSlot[] = [
   { name: '—', description: 'Option 组件列表' },
   { name: 'prefix', description: 'Select 组件头部内容' },
   { name: 'empty', description: '无选项时的列表' }
-]
+];
 
-export const document: ElDocument = { attributes, methods, events, slots }
+export const document: ElDocument = { attributes, methods, events, slots };
 
-export default document
+export default document;

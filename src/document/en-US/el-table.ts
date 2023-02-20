@@ -1,8 +1,8 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentMethod } from '@/document'
-import { DocumentEvent } from '@/document'
-import { DocumentSlot } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentMethod } from '@/document';
+import { DocumentEvent } from '@/document';
+import { DocumentSlot } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   { name: 'data', description: 'Table data', type: 'array', value: '—', default: '—' },
@@ -124,7 +124,7 @@ export const attributes: DocumentAttribute[] = [
   { name: 'lazy', description: 'whether to lazy loading data', type: 'Boolean', value: '—', default: '—' },
   { name: 'load', description: 'method for loading child row data, only works when `lazy` is true', type: 'Function(row, treeNode, resolve)', value: '—', default: '—' },
   { name: 'tree-props', description: 'configuration for rendering nested data', type: 'Object', value: '—', default: "{ hasChildren: 'hasChildren', children: 'children' }" }
-]
+];
 
 export const methods: DocumentMethod[] = [
   { name: 'clearSelection', description: 'used in multiple selection Table, clear user selection', parameter: '—' },
@@ -144,7 +144,7 @@ export const methods: DocumentMethod[] = [
   { name: 'clearFilter', description: 'clear filters of the columns whose `columnKey` are passed in. If no params, clear all filters', parameter: 'columnKeys' },
   { name: 'doLayout', description: 'refresh the layout of Table. When the visibility of Table changes, you may need to call this method to get a correct layout', parameter: '—' },
   { name: 'sort', description: 'sort Table manually. Property `prop` is used to set sort column, property `order` is used to set sort order', parameter: 'prop: string, order: string' }
-]
+];
 
 export const events: DocumentEvent[] = [
   { name: 'select', description: 'triggers when user clicks the checkbox in a row', parameter: 'selection, row' },
@@ -168,7 +168,7 @@ export const events: DocumentEvent[] = [
     description: 'triggers when user expands or collapses a row (for expandable table, second param is expandedRows; for tree Table, second param is expanded)',
     parameter: 'row, (expandedRows \\'
   }
-]
+];
 
 export const slots: DocumentSlot[] = [
   {
@@ -176,8 +176,8 @@ export const slots: DocumentSlot[] = [
     description:
       'Contents to be inserted after the last row. You may need this slot if you want to implement infinite scroll for the table. This slot will be displayed above the summary row if there is one.'
   }
-]
+];
 
-export const document: ElDocument = { attributes, methods, events, slots }
+export const document: ElDocument = { attributes, methods, events, slots };
 
-export default document
+export default document;

@@ -1,8 +1,8 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentMethod } from '@/document'
-import { DocumentEvent } from '@/document'
-import { DocumentSlot } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentMethod } from '@/document';
+import { DocumentEvent } from '@/document';
+import { DocumentSlot } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -26,7 +26,7 @@ export const attributes: DocumentAttribute[] = [
     value: '—',
     default: '—'
   }
-]
+];
 
 export const methods: DocumentMethod[] = [
   {
@@ -35,7 +35,7 @@ export const methods: DocumentMethod[] = [
     parameter: '(leafOnly) 是否只是叶子节点，默认值为 `false`'
   },
   { name: 'clearCheckedNodes', description: '清空选中的节点', parameter: '-' }
-]
+];
 
 export const events: DocumentEvent[] = [
   {
@@ -48,14 +48,14 @@ export const events: DocumentEvent[] = [
     description: '当展开节点发生变化时触发',
     parameter: '各父级选项值组成的数组'
   }
-]
+];
 
 export const slots: DocumentSlot[] = [
   {
     name: '-',
     description: '自定义备选项的节点内容，参数为 { node, data }，分别为当前节点的 Node 对象和数据'
   }
-]
+];
 
 export const props: DocumentAttribute[] = [
   {
@@ -135,8 +135,8 @@ export const props: DocumentAttribute[] = [
     value: '—',
     default: "'leaf'"
   }
-]
+];
 
-export const document: ElDocument = { attributes, methods, events, slots, props }
+export const document: ElDocument = { attributes, methods, events, slots, props };
 
-export default document
+export default document;

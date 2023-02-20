@@ -1,6 +1,6 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentEvent } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentEvent } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -31,10 +31,10 @@ export const attributes: DocumentAttribute[] = [
     value: '',
     default: '40'
   }
-]
+];
 
-export const events: DocumentEvent[] = [{ name: 'click', description: '点击按钮触发的事件', parameter: '点击事件' }]
+export const events: DocumentEvent[] = [{ name: 'click', description: '点击按钮触发的事件', parameter: '点击事件' }];
 
-export const document: ElDocument = { attributes, events }
+export const document: ElDocument = { attributes, events };
 
-export default document
+export default document;

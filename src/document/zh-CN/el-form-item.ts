@@ -1,8 +1,8 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentMethod } from '@/document'
-import { DocumentSlot } from '@/document'
-import { DocumentScopedSlot } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentMethod } from '@/document';
+import { DocumentSlot } from '@/document';
+import { DocumentScopedSlot } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -68,7 +68,7 @@ export const attributes: DocumentAttribute[] = [
     value: 'medium / small / mini',
     default: '-'
   }
-]
+];
 
 export const methods: DocumentMethod[] = [
   {
@@ -81,20 +81,20 @@ export const methods: DocumentMethod[] = [
     description: '移除该表单项的校验结果',
     parameter: '-'
   }
-]
+];
 
 export const slots: DocumentSlot[] = [
   { name: '—', description: 'Form Item 的内容' },
   { name: 'label', description: '标签文本的内容' }
-]
+];
 
 export const scopedSlots: DocumentScopedSlot[] = [
   {
     name: 'error',
     description: '自定义表单校验信息的显示方式，参数为 { error }'
   }
-]
+];
 
-export const document: ElDocument = { attributes, methods, slots, scopedSlots }
+export const document: ElDocument = { attributes, methods, slots, scopedSlots };
 
-export default document
+export default document;

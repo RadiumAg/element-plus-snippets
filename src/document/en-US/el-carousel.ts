@@ -1,7 +1,7 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentMethod } from '@/document'
-import { DocumentEvent } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentMethod } from '@/document';
+import { DocumentEvent } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   { name: 'height', description: 'height of the carousel', type: 'string', value: '—', default: '—' },
@@ -14,16 +14,16 @@ export const attributes: DocumentAttribute[] = [
   { name: 'type', description: 'type of the Carousel', type: 'string', value: 'card', default: '—' },
   { name: 'loop', description: 'display the items in loop', type: 'boolean', value: '-', default: 'true' },
   { name: 'direction', description: 'display direction', type: 'string', value: 'horizontal/vertical', default: 'horizontal' }
-]
+];
 
 export const methods: DocumentMethod[] = [
   { name: 'setActiveItem', description: 'manually switch slide', parameter: 'index of the slide to be switched to, starting from 0; or the `name` of corresponding `el-carousel-item`' },
   { name: 'prev', description: 'switch to the previous slide', parameter: '—' },
   { name: 'next', description: 'switch to the next slide', parameter: '—' }
-]
+];
 
-export const events: DocumentEvent[] = [{ name: 'change', description: 'triggers when the active slide switches', parameter: 'index of the new active slide, index of the old active slide' }]
+export const events: DocumentEvent[] = [{ name: 'change', description: 'triggers when the active slide switches', parameter: 'index of the new active slide, index of the old active slide' }];
 
-export const document: ElDocument = { attributes, methods, events }
+export const document: ElDocument = { attributes, methods, events };
 
-export default document
+export default document;

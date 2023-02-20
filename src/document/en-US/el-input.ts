@@ -1,8 +1,8 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentMethod } from '@/document'
-import { DocumentEvent } from '@/document'
-import { DocumentSlot } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentMethod } from '@/document';
+import { DocumentEvent } from '@/document';
+import { DocumentSlot } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -44,13 +44,13 @@ export const attributes: DocumentAttribute[] = [
   { name: 'label', description: 'label text', type: 'string', value: '—', default: '—' },
   { name: 'tabindex', description: 'input tabindex', type: 'string', value: '-', default: '-' },
   { name: 'validate-event', description: 'whether to trigger form validation', type: 'boolean', value: '-', default: 'true' }
-]
+];
 
 export const methods: DocumentMethod[] = [
   { name: 'focus', description: 'focus the input element', parameter: '—' },
   { name: 'blur', description: 'blur the input element', parameter: '—' },
   { name: 'select', description: 'select the text in input element', parameter: '—' }
-]
+];
 
 export const events: DocumentEvent[] = [
   { name: 'blur', description: 'triggers when Input blurs', parameter: '(event: Event)' },
@@ -58,15 +58,15 @@ export const events: DocumentEvent[] = [
   { name: 'change', description: 'triggers only when the input box loses focus or the user presses Enter', parameter: '(value: string \\' },
   { name: 'input', description: 'triggers when the Input value change', parameter: '(value: string \\' },
   { name: 'clear', description: 'triggers when the Input is cleared by clicking the clear button', parameter: '—' }
-]
+];
 
 export const slots: DocumentSlot[] = [
   { name: 'prefix', description: "content as Input prefix, only works when `type` is 'text'" },
   { name: 'suffix', description: "content as Input suffix, only works when `type` is 'text'" },
   { name: 'prepend', description: "content to prepend before Input, only works when `type` is 'text'" },
   { name: 'append', description: "content to append after Input, only works when `type` is 'text'" }
-]
+];
 
-export const document: ElDocument = { attributes, methods, events, slots }
+export const document: ElDocument = { attributes, methods, events, slots };
 
-export default document
+export default document;

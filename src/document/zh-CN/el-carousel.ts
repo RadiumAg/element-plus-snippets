@@ -1,7 +1,7 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentMethod } from '@/document'
-import { DocumentEvent } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentMethod } from '@/document';
+import { DocumentEvent } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -74,7 +74,7 @@ export const attributes: DocumentAttribute[] = [
     value: 'horizontal/vertical',
     default: 'horizontal'
   }
-]
+];
 
 export const methods: DocumentMethod[] = [
   {
@@ -84,7 +84,7 @@ export const methods: DocumentMethod[] = [
   },
   { name: 'prev', description: '切换至上一张幻灯片', parameter: '—' },
   { name: 'next', description: '切换至下一张幻灯片', parameter: '—' }
-]
+];
 
 export const events: DocumentEvent[] = [
   {
@@ -92,8 +92,8 @@ export const events: DocumentEvent[] = [
     description: '幻灯片切换时触发',
     parameter: '目前激活的幻灯片的索引，原幻灯片的索引'
   }
-]
+];
 
-export const document: ElDocument = { attributes, methods, events }
+export const document: ElDocument = { attributes, methods, events };
 
-export default document
+export default document;

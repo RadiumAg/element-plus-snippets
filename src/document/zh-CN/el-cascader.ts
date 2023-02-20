@@ -1,8 +1,8 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentMethod } from '@/document'
-import { DocumentEvent } from '@/document'
-import { DocumentSlot } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentMethod } from '@/document';
+import { DocumentEvent } from '@/document';
+import { DocumentSlot } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -110,7 +110,7 @@ export const attributes: DocumentAttribute[] = [
     value: '—',
     default: '—'
   }
-]
+];
 
 export const methods: DocumentMethod[] = [
   {
@@ -118,7 +118,7 @@ export const methods: DocumentMethod[] = [
     description: '获取选中的节点',
     parameter: '(leafOnly) 是否只是叶子节点，默认值为 `false`'
   }
-]
+];
 
 export const events: DocumentEvent[] = [
   {
@@ -151,7 +151,7 @@ export const events: DocumentEvent[] = [
     description: '在多选模式下，移除Tag时触发',
     parameter: '移除的Tag对应的节点的值'
   }
-]
+];
 
 export const slots: DocumentSlot[] = [
   {
@@ -159,8 +159,8 @@ export const slots: DocumentSlot[] = [
     description: '自定义备选项的节点内容，参数为 { node, data }，分别为当前节点的 Node 对象和数据'
   },
   { name: 'empty', description: '无匹配选项时的内容' }
-]
+];
 
-export const document: ElDocument = { attributes, methods, events, slots }
+export const document: ElDocument = { attributes, methods, events, slots };
 
-export default document
+export default document;

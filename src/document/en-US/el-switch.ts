@@ -1,7 +1,7 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentMethod } from '@/document'
-import { DocumentEvent } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentMethod } from '@/document';
+import { DocumentEvent } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   { name: 'value/v-model', description: 'binding value', type: 'boolean / string / number', value: '—', default: '—' },
@@ -17,12 +17,12 @@ export const attributes: DocumentAttribute[] = [
   { name: 'inactive-color', description: 'background color when in `off` state', type: 'string', value: '—', default: '#C0CCDA' },
   { name: 'name', description: 'input name of Switch', type: 'string', value: '—', default: '—' },
   { name: 'validate-event', description: 'whether to trigger form validation', type: 'boolean', value: '-', default: 'true' }
-]
+];
 
-export const methods: DocumentMethod[] = [{ name: 'focus', description: 'focus the Switch component', parameter: '—' }]
+export const methods: DocumentMethod[] = [{ name: 'focus', description: 'focus the Switch component', parameter: '—' }];
 
-export const events: DocumentEvent[] = [{ name: 'change', description: 'triggers when value changes', parameter: 'value after changing' }]
+export const events: DocumentEvent[] = [{ name: 'change', description: 'triggers when value changes', parameter: 'value after changing' }];
 
-export const document: ElDocument = { attributes, methods, events }
+export const document: ElDocument = { attributes, methods, events };
 
-export default document
+export default document;

@@ -1,8 +1,8 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentMethod } from '@/document'
-import { DocumentEvent } from '@/document'
-import { DocumentSlot } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentMethod } from '@/document';
+import { DocumentEvent } from '@/document';
+import { DocumentSlot } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   { name: 'value/v-model', description: 'binding value', type: '-', value: '—', default: '—' },
@@ -32,11 +32,11 @@ export const attributes: DocumentAttribute[] = [
     default: '—'
   },
   { name: 'popper-class', description: "custom class name for Cascader's dropdown", type: 'string', value: '—', default: '—' }
-]
+];
 
 export const methods: DocumentMethod[] = [
   { name: 'getCheckedNodes', description: 'get an array of currently selected node', parameter: '(leafOnly) whether only return the leaf checked nodes, default is `false`' }
-]
+];
 
 export const events: DocumentEvent[] = [
   { name: 'change', description: 'triggers when the binding value changes', parameter: 'value' },
@@ -45,13 +45,13 @@ export const events: DocumentEvent[] = [
   { name: 'focus', description: 'triggers when Cascader focuses', parameter: '(event: Event)' },
   { name: 'visible-change', description: 'triggers when the dropdown appears/disappears', parameter: 'true when it appears, and false otherwise' },
   { name: 'remove-tag', description: 'triggers when remove tag in multiple selection mode', parameter: 'the value of the tag which is removed' }
-]
+];
 
 export const slots: DocumentSlot[] = [
   { name: '-', description: 'the custom content of cascader node, the parameter is { node, data }, which are current Node object and node data respectively.' },
   { name: 'empty', description: 'content when there is no matched options.' }
-]
+];
 
-export const document: ElDocument = { attributes, methods, events, slots }
+export const document: ElDocument = { attributes, methods, events, slots };
 
-export default document
+export default document;

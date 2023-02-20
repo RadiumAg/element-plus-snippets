@@ -1,9 +1,9 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentMethod } from '@/document'
-import { DocumentEvent } from '@/document'
-import { DocumentSlot } from '@/document'
-import { DocumentScopedSlot } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentMethod } from '@/document';
+import { DocumentEvent } from '@/document';
+import { DocumentSlot } from '@/document';
+import { DocumentScopedSlot } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   { name: 'placeholder', description: 'the placeholder of Autocomplete', type: 'string', value: '—', default: '—' },
@@ -37,24 +37,24 @@ export const attributes: DocumentAttribute[] = [
     default: 'true'
   },
   { name: 'highlight-first-item', description: 'whether to highlight first item in remote search suggestions by default', type: 'boolean', value: '—', default: 'false' }
-]
+];
 
-export const methods: DocumentMethod[] = [{ name: 'focus', description: 'focus the input element', parameter: '—' }]
+export const methods: DocumentMethod[] = [{ name: 'focus', description: 'focus the input element', parameter: '—' }];
 
 export const events: DocumentEvent[] = [
   { name: 'select', description: 'triggers when a suggestion is clicked', parameter: 'suggestion being clicked' },
   { name: 'change', description: 'triggers when the icon inside Input value change', parameter: '(value: string \\' }
-]
+];
 
 export const slots: DocumentSlot[] = [
   { name: 'prefix', description: 'content as Input prefix' },
   { name: 'suffix', description: 'content as Input suffix' },
   { name: 'prepend', description: 'content to prepend before Input' },
   { name: 'append', description: 'content to append after Input' }
-]
+];
 
-export const scopedSlots: DocumentScopedSlot[] = [{ name: '—', description: 'Custom content for input suggestions. The scope parameter is { item }' }]
+export const scopedSlots: DocumentScopedSlot[] = [{ name: '—', description: 'Custom content for input suggestions. The scope parameter is { item }' }];
 
-export const document: ElDocument = { attributes, methods, events, slots, scopedSlots }
+export const document: ElDocument = { attributes, methods, events, slots, scopedSlots };
 
-export default document
+export default document;

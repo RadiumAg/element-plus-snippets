@@ -1,7 +1,7 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentMethod } from '@/document'
-import { DocumentEvent } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentMethod } from '@/document';
+import { DocumentEvent } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   { name: 'value/v-model', description: 'binding value', type: 'number', value: '—', default: '0' },
@@ -17,19 +17,19 @@ export const attributes: DocumentAttribute[] = [
   { name: 'name', description: 'same as `name` in native input', type: 'string', value: '—', default: '—' },
   { name: 'label', description: 'label text', type: 'string', value: '—', default: '—' },
   { name: 'placeholder', description: 'placeholder in input', type: 'string', value: '-', default: '-' }
-]
+];
 
 export const methods: DocumentMethod[] = [
   { name: 'focus', description: 'focus the Input component', parameter: '-' },
   { name: 'select', description: 'select the text in input element', parameter: '—' }
-]
+];
 
 export const events: DocumentEvent[] = [
   { name: 'change', description: 'triggers when the value changes', parameter: 'currentValue, oldValue' },
   { name: 'blur', description: 'triggers when Input blurs', parameter: '(event: Event)' },
   { name: 'focus', description: 'triggers when Input focuses', parameter: '(event: Event)' }
-]
+];
 
-export const document: ElDocument = { attributes, methods, events }
+export const document: ElDocument = { attributes, methods, events };
 
-export default document
+export default document;

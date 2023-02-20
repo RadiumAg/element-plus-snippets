@@ -1,5 +1,5 @@
-import { DocumentAttribute } from '@/document'
-import { ElDocument } from '@/document'
+import { DocumentAttribute } from '@/document';
+import { ElDocument } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -65,8 +65,8 @@ export const attributes: DocumentAttribute[] = [
     value: '小时：`HH`，分：`mm`，秒：`ss`，AM/PM `A`',
     default: "'HH:mm:ss'"
   }
-]
+];
 
-export const document: ElDocument = { attributes }
+export const document: ElDocument = { attributes };
 
-export default document
+export default document;

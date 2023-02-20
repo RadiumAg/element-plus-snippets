@@ -1,8 +1,8 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentEvent } from '@/document'
-import { DocumentScopedSlot } from '@/document'
-import { DocumentMethod } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentEvent } from '@/document';
+import { DocumentScopedSlot } from '@/document';
+import { DocumentMethod } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -180,7 +180,7 @@ export const attributes: DocumentAttribute[] = [
     value: '—',
     default: '—'
   }
-]
+];
 
 export const props: DocumentAttribute[] = [
   {
@@ -211,7 +211,7 @@ export const props: DocumentAttribute[] = [
     value: '—',
     default: '—'
   }
-]
+];
 
 export const methods: DocumentMethod[] = [
   {
@@ -304,7 +304,7 @@ export const methods: DocumentMethod[] = [
     description: '为 Tree 的一个节点的后面增加一个节点',
     parameter: '(data, refNode) 接收两个参数，1. 要增加的节点的 data 2. 要增加的节点的前一个节点的 data、key 或者 node'
   }
-]
+];
 
 export const events: DocumentEvent[] = [
   {
@@ -372,10 +372,10 @@ export const events: DocumentEvent[] = [
     description: '拖拽成功完成时触发的事件',
     parameter: '共四个参数，依次为：被拖拽节点对应的 Node、结束拖拽时最后进入的节点、被拖拽节点的放置位置（before、after、inner）、event'
   }
-]
+];
 
-export const scopedSlots: DocumentScopedSlot[] = [{ name: '—', description: '自定义树节点的内容，参数为 { node, data }' }]
+export const scopedSlots: DocumentScopedSlot[] = [{ name: '—', description: '自定义树节点的内容，参数为 { node, data }' }];
 
-export const document: ElDocument = { attributes, events, scopedSlots, methods, props }
+export const document: ElDocument = { attributes, events, scopedSlots, methods, props };
 
-export default document
+export default document;

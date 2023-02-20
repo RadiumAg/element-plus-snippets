@@ -1,6 +1,6 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentEvent } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentEvent } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -122,10 +122,10 @@ export const attributes: DocumentAttribute[] = [
     value: '—',
     default: '{value}'
   }
-]
+];
 
-export const events: DocumentEvent[] = [{ name: 'change', description: '分值改变时触发', parameter: '改变后的分值' }]
+export const events: DocumentEvent[] = [{ name: 'change', description: '分值改变时触发', parameter: '改变后的分值' }];
 
-export const document: ElDocument = { attributes, events }
+export const document: ElDocument = { attributes, events };
 
-export default document
+export default document;

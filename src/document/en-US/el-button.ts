@@ -1,5 +1,5 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   { name: 'size', description: 'button size', type: 'string', value: 'medium / small / mini', default: '—' },
@@ -12,8 +12,8 @@ export const attributes: DocumentAttribute[] = [
   { name: 'icon', description: 'icon class name', type: 'string', value: '—', default: '—' },
   { name: 'autofocus', description: "same as native button's `autofocus`", type: 'boolean', value: '—', default: 'false' },
   { name: 'native-type', description: "same as native button's `type`", type: 'string', value: 'button / submit / reset', default: 'button' }
-]
+];
 
-export const document: ElDocument = { attributes }
+export const document: ElDocument = { attributes };
 
-export default document
+export default document;

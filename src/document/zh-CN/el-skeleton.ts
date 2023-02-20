@@ -1,6 +1,6 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentSlot } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentSlot } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -38,13 +38,13 @@ export const attributes: DocumentAttribute[] = [
     value: '正整数',
     default: '0'
   }
-]
+];
 
 export const slots: DocumentSlot[] = [
   { name: 'default', description: '用来展示真实 UI' },
   { name: 'template', description: '用来展示自定义占位符' }
-]
+];
 
-export const document: ElDocument = { attributes, slots }
+export const document: ElDocument = { attributes, slots };
 
-export default document
+export default document;

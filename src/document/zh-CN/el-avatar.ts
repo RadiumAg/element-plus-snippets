@@ -1,7 +1,7 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentEvent } from '@/document'
-import { DocumentSlot } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentEvent } from '@/document';
+import { DocumentSlot } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -53,7 +53,7 @@ export const attributes: DocumentAttribute[] = [
     value: 'fill / contain / cover / none / scale-down',
     default: 'cover'
   }
-]
+];
 
 export const events: DocumentEvent[] = [
   {
@@ -61,10 +61,10 @@ export const events: DocumentEvent[] = [
     description: '图片类头像加载失败的回调， 返回 false 会关闭组件默认的 fallback 行为',
     parameter: '(e: Event)'
   }
-]
+];
 
-export const slots: DocumentSlot[] = [{ name: 'default', description: '自定义头像展示内容' }]
+export const slots: DocumentSlot[] = [{ name: 'default', description: '自定义头像展示内容' }];
 
-export const document: ElDocument = { attributes, events, slots }
+export const document: ElDocument = { attributes, events, slots };
 
-export default document
+export default document;

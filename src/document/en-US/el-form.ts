@@ -1,7 +1,7 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentMethod } from '@/document'
-import { DocumentEvent } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentMethod } from '@/document';
+import { DocumentEvent } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   { name: 'model', description: 'data of form component', type: 'object', value: '—', default: '—' },
@@ -23,7 +23,7 @@ export const attributes: DocumentAttribute[] = [
     value: '—',
     default: 'false'
   }
-]
+];
 
 export const methods: DocumentMethod[] = [
   {
@@ -40,12 +40,12 @@ export const methods: DocumentMethod[] = [
       "clear validation message for certain fields. The parameter is prop name or an array of prop names of the form items whose validation messages will be removed. When omitted, all fields' validation messages will be cleared",
     parameter: 'Function(props: string \\'
   }
-]
+];
 
 export const events: DocumentEvent[] = [
   { name: 'validate', description: 'triggers after a form item is validated', parameter: 'prop name of the form item being validated, whether validation is passed and the error message if not' }
-]
+];
 
-export const document: ElDocument = { attributes, methods, events }
+export const document: ElDocument = { attributes, methods, events };
 
-export default document
+export default document;

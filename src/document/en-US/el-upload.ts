@@ -1,7 +1,7 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentMethod } from '@/document'
-import { DocumentSlot } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentMethod } from '@/document';
+import { DocumentSlot } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -180,19 +180,19 @@ export const attributes: DocumentAttribute[] = [
     value: '—',
     default: '-'
   }
-]
+];
 
 export const methods: DocumentMethod[] = [
   { name: 'clearFiles', description: 'clear the uploaded file list (this method is not supported in the `before-upload` hook)', parameter: '—' },
   { name: 'abort', description: 'cancel upload request', parameter: "（ file: fileList's item ）" },
   { name: 'submit', description: 'upload the file list manually', parameter: '—' }
-]
+];
 
 export const slots: DocumentSlot[] = [
   { name: 'trigger', description: 'content which triggers file dialog' },
   { name: 'tip', description: 'content of tips' }
-]
+];
 
-export const document: ElDocument = { attributes, methods, slots }
+export const document: ElDocument = { attributes, methods, slots };
 
-export default document
+export default document;

@@ -1,8 +1,8 @@
-import { ElDocument } from '@/document'
-import { DocumentAttribute } from '@/document'
-import { DocumentMethod } from '@/document'
-import { DocumentEvent } from '@/document'
-import { DocumentSlot } from '@/document'
+import { ElDocument } from '@/document';
+import { DocumentAttribute } from '@/document';
+import { DocumentMethod } from '@/document';
+import { DocumentEvent } from '@/document';
+import { DocumentSlot } from '@/document';
 
 export const attributes: DocumentAttribute[] = [
   {
@@ -166,9 +166,9 @@ export const attributes: DocumentAttribute[] = [
     value: '—',
     default: 'el-icon-circle-close'
   }
-]
+];
 
-export const methods: DocumentMethod[] = [{ name: 'focus', description: '使 input 获取焦点', parameter: '—' }]
+export const methods: DocumentMethod[] = [{ name: 'focus', description: '使 input 获取焦点', parameter: '—' }];
 
 export const events: DocumentEvent[] = [
   {
@@ -186,9 +186,9 @@ export const events: DocumentEvent[] = [
     description: '当 input 获得焦点时触发',
     parameter: '组件实例'
   }
-]
+];
 
-export const slots: DocumentSlot[] = [{ name: 'range-separator', description: '自定义分隔符' }]
+export const slots: DocumentSlot[] = [{ name: 'range-separator', description: '自定义分隔符' }];
 
 export const pickerOptions: DocumentAttribute[] = [
   {
@@ -219,7 +219,7 @@ export const pickerOptions: DocumentAttribute[] = [
     value: '1 到 7',
     default: 7
   }
-]
+];
 
 export const shortcuts: DocumentAttribute[] = [
   {
@@ -236,8 +236,8 @@ export const shortcuts: DocumentAttribute[] = [
     value: '—',
     default: '—'
   }
-]
+];
 
-export const document: ElDocument = { attributes, methods, events, slots, pickerOptions, shortcuts }
+export const document: ElDocument = { attributes, methods, events, slots, pickerOptions, shortcuts };
 
-export default document
+export default document;
