@@ -9,13 +9,18 @@
 			"name": "Run Extension",
 			"type": "extensionHost",
 			"request": "launch",
+			"runtimeExecutable": "${execPath}",
 			"args": [
 				"--extensionDevelopmentPath=${workspaceFolder}"
 			],
 			"outFiles": [
 				"${workspaceFolder}/out/**/*.js"
 			],
-			"preLaunchTask": "${defaultBuildTask}"
+			"sourceMaps": true,
+			"postDebugTask": {
+				"type": "npm",
+				"script": "watch",
+			}
 		},
 		{
 			"name": "Extension Tests",

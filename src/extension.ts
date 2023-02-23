@@ -6,7 +6,7 @@ import { ElementCompletionItemProvider } from './completion/element-completion-i
 
 export function activate(context: ExtensionContext): void {
   console.log('extension "element-ui-helper" is now active!');
-
+  
   // 注册 completion 提示
   context.subscriptions.push(
     vscode.languages.registerCompletionItemProvider(
@@ -46,8 +46,3 @@ export function activate(context: ExtensionContext): void {
 
 // this method is called when your extension is deactivated
 export function deactivate() {}
-
-export default {
-  activate,
-  deactivate
-};

@@ -2,44 +2,34 @@
   "name": "element-plus-snippets",
   "displayName": "element-plus-snippets",
   "description": "",
+  "author": {
+    "name": "radium"
+  },
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.75.0"
+    "vscode": "^1.67.0"
   },
   "categories": [
     "Other"
   ],
-  "contributes": {
-    "configuration": {
-      "type": "object",
-      "title": "Element UI Helper Config",
-      "properties": {
-        "element-ui-helper.language": {
-          "type": "string",
-          "default": "zh-CN",
-          "description": "Document Language of Element UI",
-          "enum": [
-            "zh-CN",
-            "en-US"
-          ]
-        }
-      }
-    }
-  },
+  "capabilities": {},
+  "contributes": {},
   "activationEvents": [
-    "onLanguage:vue",
-    "onDebug"
+    "onLanguage:vue"
   ],
   "main": "./out/extension.js",
   "scripts": {
     "vscode:prepublish": "pnpm run compile",
     "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
+    "watch": "pnpm esno  ./rollup.config.ts ",
+    "build": "pnpm esno  ./rollup.config.ts ",
     "pretest": "pnpm run compile && pnpm run lint",
     "lint": "eslint ./src/**  --fix",
     "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-terser": "^0.4.0",
     "@types/glob": "^8.0.1",
     "@types/mocha": "^10.0.1",
     "@types/node": "~18.14.0",
@@ -48,8 +38,11 @@
     "@typescript-eslint/parser": "^5.52.0",
     "@vscode/test-electron": "^2.2.3",
     "eslint": "^8.34.0",
+    "esno": "^0.16.3",
     "glob": "^8.1.0",
     "mocha": "^10.2.0",
+    "rollup": "^3.17.2",
+    "rollup-plugin-typescript2": "^0.34.1",
     "shelljs": "^0.8.5",
     "typescript": "^4.9.5"
   }

@@ -1,7 +1,5 @@
-import { ElDocument } from '@/document';
-import { DocumentAttribute } from '@/document';
-import { DocumentEvent } from '@/document';
-import { DocumentSlot } from '@/document';
+import { DocumentAttribute,DocumentEvent,DocumentSlot,ElDocument } from "..";
+
 
 export const attributes: DocumentAttribute[] = [
   {
