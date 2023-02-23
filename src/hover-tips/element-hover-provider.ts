@@ -1,4 +1,4 @@
-import { HoverProvider, TextDocument, Position, CancellationToken, ProviderResult, Hover, workspace, MarkdownString, Range } from 'vscode';
+import { HoverProvider, TextDocument, Position, CancellationToken, ProviderResult, Hover, workspace, Range } from 'vscode';
 
 import { toKebabCase } from '../utils';
 import { ExtensionConfigutation, ExtensionLanguage } from '../';
@@ -175,5 +175,6 @@ export class ElementHoverProvier implements HoverProvider {
       attr = '';
     }
     HoverDocumentGenerator.getInstance().getDocument();
+    return null;
   }
 }

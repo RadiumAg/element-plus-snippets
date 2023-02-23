@@ -21,7 +21,7 @@
   "scripts": {
     "vscode:prepublish": "pnpm run compile",
     "compile": "tsc -p ./",
-    "watch": "pnpm esno  ./rollup.config.ts ",
+    "watch": "pnpm esno  ./rollup.config.ts --w=true ",
     "build": "pnpm esno  ./rollup.config.ts ",
     "pretest": "pnpm run compile && pnpm run lint",
     "lint": "eslint ./src/**  --fix",

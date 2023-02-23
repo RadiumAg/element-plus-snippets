@@ -16,6 +16,19 @@
 				"kind": "build",
 				"isDefault": true
 			}
+		},
+		{
+			"type": "npm",
+			"script": "build",
+			"problemMatcher": "$tsc-watch",
+			"isBackground": true,
+			"presentation": {
+				"panel": "dedicated",
+				"reveal": "always",
+			},
+			"group": {
+				"kind": "build",
+			}
 		}
 	]
 }

@@ -1,10 +1,10 @@
-import {get} from 'axios';
-
+import path from 'path';
 export class HoverDocumentGenerator {
   static instance: HoverDocumentGenerator;
 
   async getDocument(){
-    const document  = await get('http://element-plus.org/',{responseType:'document'}); 
+    // const document  = await axios.default.get('http://element-plus.org/',{responseType:'document'}); 
+    console.log(path);
   }
 
 

@@ -17,6 +17,10 @@
 				"${workspaceFolder}/out/**/*.js"
 			],
 			"sourceMaps": true,
+			"preLaunchTask": {
+				"type": "npm",
+				"script": "build"
+			},
 			"postDebugTask": {
 				"type": "npm",
 				"script": "watch",
