@@ -1,10 +1,9 @@
 import { HoverProvider, TextDocument, Position, CancellationToken, ProviderResult, Hover, workspace, MarkdownString, Range } from 'vscode';
 
-import { ElDocument, localDocument } from '@/document';
-import { HoverDocumentGenerator } from '@/utils/document-generator';
 import { toKebabCase } from '../utils';
 import { ExtensionConfigutation, ExtensionLanguage } from '../';
 import { TagObject } from '.';
+import { HoverDocumentGenerator } from '@/utils/document-generator';
 
 export class ElementHoverProvier implements HoverProvider {
   private _position!: Position;
@@ -172,22 +171,9 @@ export class ElementHoverProvier implements HoverProvider {
    * @param range 范围
    */
   createHoverInstance(language: ExtensionLanguage, tag: string, attr: string, range: Range): null | Hover {
-    let document: Record<string, any> = localDocument[language];
     if (tag === attr) {
       attr = '';
     }
-    if (Object.prototype.hasOwnProperty.call(document, tag)) {
-      const tagDocument = document[tag];
-      const hoverMarkdownStrings: MarkdownString[] = [];
-      Object.keys(tagDocument).forEach((key: string) => {
-        const hoverMarkdownString: MarkdownString = HoverDocumentGenerator.getInstance().generate<ElDocument>(tagDocument, key, tag, attr, language);
-        if (hoverMarkdownString) {
-          hoverMarkdownStrings.push(hoverMarkdownString);
-        }
-      });
-      return new Hover(hoverMarkdownStrings, range);
-    } else {
-      return null;
-    }
+    HoverDocumentGenerator.getInstance().getDocument();
   }
 }
