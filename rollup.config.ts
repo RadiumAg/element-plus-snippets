@@ -39,6 +39,13 @@ const buildOptions: RollupOptions | InputOption = {
   },
 };
 
+const getArgv = () => {
+  const arg = argv
+    .filter((_) => _.includes("="))
+    .map((_) => _.replace("--", "").split("="));
+  return Object.fromEntries(arg);
+};
+
 const outOptions: OutputOptions = {
   format: "cjs",
   file: path.resolve(__dirname, "out/extension.js"),
@@ -50,9 +57,13 @@ const runBuild = async () => {
   const {w} = getArgv();
 
   if (w === "true") {
-    watch({
+   const watcher =  watch({
       input: buildOptions as InputOption,
       output: outOptions,
+    });
+
+    watcher.on('change',(id)=>{
+      console.log(id);
     });
   } else {
     const build = await rollup(buildOptions);
@@ -60,11 +71,6 @@ const runBuild = async () => {
   }
 };
 
-const getArgv = () => {
-  const arg = argv
-    .filter((_) => _.includes("="))
-    .map((_) => _.replace("--", "").split("="));
-  return Object.fromEntries(arg);
-};
+
 
 runBuild();
