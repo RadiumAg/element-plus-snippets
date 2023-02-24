@@ -1,9 +1,9 @@
+import { HoverDocumentGenerator } from './../utils/document-generator';
 import { HoverProvider, TextDocument, Position, CancellationToken, ProviderResult, Hover, workspace, Range } from 'vscode';
 
 import { toKebabCase } from '../utils';
-import { ExtensionConfigutation, ExtensionLanguage } from '../';
+import { ExtensionConfig, ExtensionLanguage } from '../';
 import { TagObject } from '.';
-import { HoverDocumentGenerator } from '@/utils/document-generator';
 
 export class ElementHoverProvier implements HoverProvider {
   private _position!: Position;
@@ -153,7 +153,7 @@ export class ElementHoverProvier implements HoverProvider {
    * @param range 区域
    */
   getHoverInstance(tag: TagObject | undefined, attr: string, range: Range) {
-    const config = workspace.getConfiguration().get<ExtensionConfigutation>('element-ui-helper');
+    const config = workspace.getConfiguration().get<ExtensionConfig>('element-ui-helper');
     const language = config?.language || ExtensionLanguage.cn;
 
     const kebabCaseTag = toKebabCase(tag?.text);
@@ -174,7 +174,8 @@ export class ElementHoverProvier implements HoverProvider {
     if (tag === attr) {
       attr = '';
     }
-    HoverDocumentGenerator.getInstance().getDocument();
-    return null;
+    const componentName = tag.split('-').at(1);
+    HoverDocumentGenerator.getInstance().getDocument(componentName);
+    return new Hover("234234234",range);
   }
 }

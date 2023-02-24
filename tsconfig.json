@@ -1,6 +1,6 @@
 {
 	"compilerOptions": {
-		"module": "ESNext",
+		"module": "CommonJS",
 		"target": "ES2020",
 		"outDir": "out",
 		"lib": [
@@ -16,6 +16,7 @@
 				"src/*"
 			]
 		},
+		"rootDir": "src",
 		"allowSyntheticDefaultImports": true,
 		"resolveJsonModule": true,
 		"strict": true /* enable all strict type-checking options */
@@ -24,9 +25,5 @@
 		// "noFallthroughCasesInSwitch": true, /* Report errors for fallthrough cases in switch statement. */
 		// "noUnusedParameters": true,  /* Report errors on unused parameters. */
 	},
-	"references": [
-		{
-			"path": "tsconfig.node.json"
-		}
-	],
+	"include": ["src/**/*"]
 }

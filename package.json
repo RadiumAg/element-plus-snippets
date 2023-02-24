@@ -21,8 +21,9 @@
   "scripts": {
     "vscode:prepublish": "pnpm run compile",
     "compile": "tsc -p ./",
-    "watch": "pnpm esno  ./rollup.config.ts --w=true ",
-    "build": "pnpm esno  ./rollup.config.ts ",
+    "watch:tsc":"tsc -watch -p ./",
+    "watch": "pnpm esno ./rollup.config.ts --w=true ",
+    "build": "pnpm esno ./rollup.config.ts ",
     "pretest": "pnpm run compile && pnpm run lint",
     "lint": "eslint ./src/**  --fix",
     "test": "node ./out/test/runTest.js"
@@ -37,6 +38,7 @@
     "@typescript-eslint/eslint-plugin": "^5.52.0",
     "@typescript-eslint/parser": "^5.52.0",
     "@vscode/test-electron": "^2.2.3",
+    "axios": "^1.3.4",
     "eslint": "^8.34.0",
     "esno": "^0.16.3",
     "glob": "^8.1.0",
