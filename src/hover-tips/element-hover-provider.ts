@@ -1,9 +1,18 @@
-import { HoverDocumentGenerator } from './../utils/document-generator';
-import { HoverProvider, TextDocument, Position, CancellationToken, ProviderResult, Hover, workspace, Range } from 'vscode';
+import {HoverDocumentGenerator} from "./../utils/document-generator";
+import {
+  HoverProvider,
+  TextDocument,
+  Position,
+  CancellationToken,
+  ProviderResult,
+  Hover,
+  workspace,
+  Range,
+} from "vscode";
 
-import { toKebabCase } from '../utils';
-import { ExtensionConfig, ExtensionLanguage } from '../';
-import { TagObject } from '.';
+import {toKebabCase} from "../utils";
+import {ExtensionConfig, ExtensionLanguage} from "../";
+import {TagObject} from ".";
 
 export class ElementHoverProvier implements HoverProvider {
   private _position!: Position;
@@ -12,14 +21,18 @@ export class ElementHoverProvier implements HoverProvider {
   private tagReg: RegExp = /<([\w-]+)\s*/g;
   private attrReg: RegExp = /(?:\(|\s*)([\w-]+)=?/;
 
-  provideHover(document: TextDocument, position: Position, token: CancellationToken): ProviderResult<Hover> {
+  provideHover(
+    document: TextDocument,
+    position: Position,
+    token: CancellationToken
+  ): ProviderResult<Hover> {
     this._document = document;
     this._position = position;
     this._token = token;
 
     const tag: TagObject | undefined = this.getTag();
 
-    if (!/^[E|e]l/.test(tag?.text || '')) {
+    if (!/^[E|e]l/.test(tag?.text || "")) {
       // 如果不是element的标签(E|el开头) 则返回 null 表示没有hover
       return null;
     }
@@ -44,7 +57,7 @@ export class ElementHoverProvier implements HoverProvider {
         txt = this._document.lineAt(line).text;
       }
       tag = this.matchTag(this.tagReg, txt, line);
-      if (tag === 'break') {
+      if (tag === "break") {
         return undefined;
       }
       if (tag) {
@@ -61,8 +74,10 @@ export class ElementHoverProvier implements HoverProvider {
   getAttr(): string {
     const txt = this.getTextAfterPosition(this._position);
     let end = txt.length;
-    let start = txt.lastIndexOf(' ', this._position.character) + 1;
-    let parsedTxt = this._document.getText(new Range(this._position.line, start, this._position.line, end));
+    let start = txt.lastIndexOf(" ", this._position.character) + 1;
+    let parsedTxt = this._document.getText(
+      new Range(this._position.line, start, this._position.line, end)
+    );
     return this.matchAttr(this.attrReg, parsedTxt);
   }
 
@@ -74,7 +89,12 @@ export class ElementHoverProvier implements HoverProvider {
     const line = this._document.lineAt(this._position.line).text;
     const start = line.indexOf(attr);
     const end = start + attr.length;
-    const range = new Range(this._position.line, start, this._position.line, end);
+    const range = new Range(
+      this._position.line,
+      start,
+      this._position.line,
+      end
+    );
     return range;
   }
 
@@ -84,17 +104,26 @@ export class ElementHoverProvier implements HoverProvider {
    * @param txt 待匹配字符
    * @param line 匹配行
    */
-  matchTag(reg: RegExp, txt: string, line: number): TagObject | string | undefined {
+  matchTag(
+    reg: RegExp,
+    txt: string,
+    line: number
+  ): TagObject | string | undefined {
     let match: RegExpExecArray | null;
     let arr: TagObject[] = [];
 
-    if (/<\/?[-\w]+[^<>]*>[\s\w]*<?\s*[\w-]*$/.test(txt) || (this._position.line === line && (/^\s*[^<]+\s*>[^</>]*$/.test(txt) || /[^<>]*<$/.test(txt[txt.length - 1])))) {
-      return 'break';
+    if (
+      /<\/?[-\w]+[^<>]*>[\s\w]*<?\s*[\w-]*$/.test(txt) ||
+      (this._position.line === line &&
+        (/^\s*[^<]+\s*>[^</>]*$/.test(txt) ||
+          /[^<>]*<$/.test(txt[txt.length - 1])))
+    ) {
+      return "break";
     }
     while ((match = reg.exec(txt))) {
       arr.push({
         text: match[1],
-        offset: this._document.offsetAt(new Position(line, match.index))
+        offset: this._document.offsetAt(new Position(line, match.index)),
       });
     }
     return arr.pop();
@@ -112,7 +141,7 @@ export class ElementHoverProvier implements HoverProvider {
     if (!/"[^"]*"/.test(txt) && match) {
       return match[1];
     }
-    return '';
+    return "";
   }
 
   /**
@@ -153,13 +182,20 @@ export class ElementHoverProvier implements HoverProvider {
    * @param range 区域
    */
   getHoverInstance(tag: TagObject | undefined, attr: string, range: Range) {
-    const config = workspace.getConfiguration().get<ExtensionConfig>('element-ui-helper');
+    const config = workspace
+      .getConfiguration()
+      .get<ExtensionConfig>("element-ui-helper");
     const language = config?.language || ExtensionLanguage.cn;
 
     const kebabCaseTag = toKebabCase(tag?.text);
     const kebabCaseAttr = toKebabCase(attr);
 
-    return this.createHoverInstance(language, kebabCaseTag, kebabCaseAttr, range);
+    return this.createHoverInstance(
+      language,
+      kebabCaseTag,
+      kebabCaseAttr,
+      range
+    );
   }
 
   /**
@@ -170,12 +206,20 @@ export class ElementHoverProvier implements HoverProvider {
    * @param attr 属性
    * @param range 范围
    */
-  createHoverInstance(language: ExtensionLanguage, tag: string, attr: string, range: Range): null | Hover {
+  async createHoverInstance(
+    language: ExtensionLanguage,
+    tag: string,
+    attr: string,
+    range: Range
+  ): Promise<null | Hover> {
     if (tag === attr) {
-      attr = '';
+      attr = "";
     }
-    const componentName = tag.split('-').at(1);
-    HoverDocumentGenerator.getInstance().getDocument(componentName);
-    return new Hover("234234234",range);
+    const componentName = tag.split("-").at(1);
+    const document = await HoverDocumentGenerator.getInstance().getDocument(
+      componentName
+    );
+    console.log(document);
+    return new Hover(document || '', range);
   }
 }

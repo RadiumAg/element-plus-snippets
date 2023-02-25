@@ -1,13 +1,17 @@
 import path from "path";
 import axios from "axios";
+import * as  cheerio from 'cheerio';
+import { NodeHtmlMarkdown, NodeHtmlMarkdownOptions } from 'node-html-markdown';
+
 
 export class HoverDocumentGenerator {
   static instance: HoverDocumentGenerator;
 
   async getDocument(componentName:string | undefined) {
     if(!componentName) {return;};
-     const {data: document} = await axios.get(`http://element-plus.org/zh-CN/component/${componentName}`);
-     console.log(document);
+     const {data: document} = await axios.get(`http://element-plus.org/zh-CN/component/${componentName}`,{responseType:'document'});
+     const $ = cheerio.load(document);
+     return NodeHtmlMarkdown.translate($('.vp-table,.h2:not').contents().toString());
   }
 
   static getInstance(): HoverDocumentGenerator {
