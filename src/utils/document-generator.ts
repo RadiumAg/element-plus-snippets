@@ -1,4 +1,3 @@
-import path from "path";
 import axios from "axios";
 import * as  cheerio from 'cheerio';
 import { NodeHtmlMarkdown, NodeHtmlMarkdownOptions } from 'node-html-markdown';
