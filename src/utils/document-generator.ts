@@ -11,7 +11,7 @@ export class HoverDocumentGenerator {
     if(!componentName) {return;};
      const {data: document} = await axios.get(`http://element-plus.org/zh-CN/component/${componentName}`,{responseType:'document'});
      const $ = cheerio.load(document);
-     return NodeHtmlMarkdown.translate($('.vp-table,.h2:not').contents().toString());
+     return NodeHtmlMarkdown.translate($('.vp-table').contents().toString());
   }
 
   static getInstance(): HoverDocumentGenerator {
