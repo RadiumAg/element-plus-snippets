@@ -13,7 +13,11 @@
     "Other"
   ],
   "capabilities": {},
-  "contributes": {},
+  "contributes": {
+    "markdown.previewStyles": [
+      "./resource/han.css"
+  ]
+  },
   "activationEvents": [
     "onLanguage:vue"
   ],

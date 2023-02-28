@@ -8,6 +8,7 @@ import {
   Hover,
   workspace,
   Range,
+  MarkdownString,
 } from "vscode";
 
 import {toKebabCase} from "../utils";
@@ -219,7 +220,7 @@ export class ElementHoverProvier implements HoverProvider {
     const document = await HoverDocumentGenerator.getInstance().getDocument(
       componentName
     );
-    console.log(document);
+
     return new Hover(document || '', range);
   }
 }
